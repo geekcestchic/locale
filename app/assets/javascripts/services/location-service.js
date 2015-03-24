@@ -4,6 +4,8 @@ app.factory('LocationService', function($http, $q){
     
     getCrimes: function(latitude,longitude){
       return $http.get('http://data.police.uk/api/crimes-street/all-crime?lat='+latitude+'&lng='+longitude);
+      $scope.newLocation = false;
+      Location.locationForm.$setPristine();
     },
     
     codeAddress: function(address){
@@ -12,12 +14,13 @@ app.factory('LocationService', function($http, $q){
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
 
-          // map.setCenter(results[0].geometry.location);
-
+          // var mapCenter = results[0].geometry.location;
+          
           // var marker = new google.maps.Marker({
           //   map: map,
           //   position: results[0].geometry.location
           // });
+          // var markers.push(marker)
 
           var coordinates = {
             longitude: results[0].geometry.location.D,
@@ -52,6 +55,10 @@ app.factory('LocationService', function($http, $q){
     drawCrimeGraph: function(first,second,third){
 
       console.log(second*10)
+      $('.radius-one').html('')
+      $('.radius-two').html('')
+      $('.radius-three').html('')
+
       $('.radius-one').css('height', first*10)
       $('.radius-two').css('height', second*10)
       $('.radius-three').css('height', third*10)

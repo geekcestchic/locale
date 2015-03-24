@@ -1,18 +1,25 @@
-<h1>I am the view</h1>
-
-<div ng-controller="LocationController as Location">
-  <map zoom="14" center="London">
-  </map>
-  
-  <form name="locationForm" ng-submit="returnStats(newLocation)">
-    <label>Please Enter a Postcode</label>
-    <input type="text" ng-model="newLocation">
-    <button>SUBMIT</button>
-  </form>
-  <crimes></crimes>
-  {{ coordinates }}
-  <br>
 
 
-  <!-- <ul ng-show="" -->
+<div class="site-container" ng-controller="LocationController as Location">
+  <div class="welcome">
+    <h1>I am the view</h1>
+    <map ng-if="coordinates" 
+    zoom="14" 
+    center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
+    styles= {{ mapStyle }}>
+      <marker ng-if="coordinates"
+      position="{{coordinates.latitude}}, {{coordinates.longitude}}">
+      </marker>
+    </map>
+    
+    <form name="locationForm" ng-submit="returnStats(newLocation)">
+      <label>Please Enter a London Address:</label>
+      <input type="text" ng-model="newLocation">
+      <button>SUBMIT</button>
+    </form>
+  </div>
+  <div class="results">
+    <crimes></crimes>
+  </div>
+  {{coordinates}}
 </div>
