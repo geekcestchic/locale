@@ -1,0 +1,14 @@
+#= depend_on_asset "index.html"
+
+var app = angular.module('locationApp', ['ngAnimate','ngRoute','ngMap'])
+
+app.config(function($routeProvider){
+  $routeProvider
+  .when('/',{
+    controller: 'LocationController',
+    templateUrl: "<%= asset_path('index.html') %>"
+  })
+  .otherwise({
+    redirectTo: '/'
+  });
+})

@@ -1,0 +1,21 @@
+crimes{
+  display:inline-block;
+  .radius-one{
+    display:inline-block;
+    background-color:red;
+    height:0;
+    width:20px;
+  }
+  .radius-two{
+    display:inline-block;
+    background-color:blue;
+    height:0;
+    width:20px;
+  }
+  .radius-three{
+    display:inline-block;
+    background-color:green;
+    height:0;
+    width:20px;
+  }
+}
