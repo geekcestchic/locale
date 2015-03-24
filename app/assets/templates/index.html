@@ -6,7 +6,12 @@
     <map ng-if="coordinates" 
     zoom="14" 
     center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
-    styles= {{ mapStyle }}>
+    styles="{{mapStyle}}">
+      <transit-layer></transit-layer>
+      <fusion-tables-layer query="{
+        select: 'Geocodable address',
+        from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'}">
+      </fusion-tables-layer>
       <marker ng-if="coordinates"
       position="{{coordinates.latitude}}, {{coordinates.longitude}}">
       </marker>

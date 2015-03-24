@@ -53,8 +53,7 @@ app.factory('LocationService', function($http, $q){
     },
     
     drawCrimeGraph: function(first,second,third){
-
-      console.log(second*10)
+      $('crimes').text('')
       $('.radius-one').html('')
       $('.radius-two').html('')
       $('.radius-three').html('')
@@ -66,6 +65,8 @@ app.factory('LocationService', function($http, $q){
       $('.radius-one').append('<p>'+first+'</p>')
       $('.radius-two').append('<p>'+second+'</p>')
       $('.radius-three').append('<p>'+third+'</p>')
+
+      $('crimes').prepend('<p>Crimes in the last month</p>')
 
     },
     
