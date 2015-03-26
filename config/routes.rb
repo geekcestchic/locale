@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static#index'
+  post 'static/get_property_prices' => 'static#get_property_prices'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -14,6 +14,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require ng-map.min
-//= require google-maps.js
+// require ng-resource.min
+// require google-maps.js
+//= require google-places.js
 //= require app
 //= require_tree .

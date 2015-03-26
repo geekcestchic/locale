@@ -13,27 +13,17 @@ app.factory('LocationService', function($http, $q){
       var geocoder = new google.maps.Geocoder();
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-
-          // var mapCenter = results[0].geometry.location;
-          
-          // var marker = new google.maps.Marker({
-          //   map: map,
-          //   position: results[0].geometry.location
-          // });
-          // var markers.push(marker)
-
           var coordinates = {
             longitude: results[0].geometry.location.D,
             latitude: results[0].geometry.location.k
           };
-
           deferred.resolve(coordinates);
         } else {
           deferred.reject();
           alert("Geocode was not successful for the following reason: " + status);
         }
       });
-      return deferred.promise; //returns the coordinates???
+      return deferred.promise; 
     },
     
     countCrimes: function(currentLocation,crimes){
@@ -46,28 +36,18 @@ app.factory('LocationService', function($http, $q){
         if (distance > 50 && distance <= 100) secondRadius += 1;
         if (distance > 100 && distance <=200) thirdRadius += 1;
       });
-      console.log(firstRadius)
-      console.log(secondRadius)
-      console.log(thirdRadius)
       LocationService.drawCrimeGraph(firstRadius,secondRadius,thirdRadius)
     },
     
     drawCrimeGraph: function(first,second,third){
-      $('crimes').text('')
-      $('.radius-one').html('')
-      $('.radius-two').html('')
-      $('.radius-three').html('')
-
+      $('crimes').find('p').empty();
       $('.radius-one').css('height', first*10)
       $('.radius-two').css('height', second*10)
       $('.radius-three').css('height', third*10)
-
       $('.radius-one').append('<p>'+first+'</p>')
       $('.radius-two').append('<p>'+second+'</p>')
       $('.radius-three').append('<p>'+third+'</p>')
-
       $('crimes').prepend('<p>Crimes in the last month</p>')
-
     },
     
     getDistance: function(p1, p2) {

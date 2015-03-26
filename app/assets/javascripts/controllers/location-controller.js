@@ -1,11 +1,7 @@
-app.controller('LocationController', function($scope, $timeout, $http, $q, LocationService) {
-
-  // $scope.$on('mapInitialized', function(event, map) {
-  //       // map.setCenter(51,0)
-  //       console.log('map initialized')
-  //     });
+app.controller('LocationController', function($scope, $rootScope, $timeout, $http, $q, LocationService, NearbyService){
 
   $scope.returnStats =  function(address){
+    //geocoding the address to use the crimes api
     LocationService.codeAddress(address)  // Geocoding the address, see Location Service
     .then(function(data) {
       $scope.coordinates = data;
@@ -15,8 +11,19 @@ app.controller('LocationController', function($scope, $timeout, $http, $q, Locat
       $scope.crimes = crimesObject.data;
       LocationService.countCrimes($scope.coordinates, $scope.crimes);
     });
+    //Zoopla API
+    NearbyService.getPropertyPrices(address)
+    //geocoding the address to use the google places API to find the closest station
+    LocationService.codeAddress(address)
+    .then(function(data){
+      $scope.coordinatesForStation = data;
+      $scope.$on('mapInitialized', function(event, map){
+        $scope.map = map
+        NearbyService.getClosestStation($scope.map, data.latitude, data.longitude)
+      });    
+    })
   };
-
+  //snazzy maps
   $scope.mapStyle = mapStyle;
 
 });

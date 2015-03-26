@@ -1,6 +1,6 @@
 #= depend_on_asset "index.html"
 
-var app = angular.module('locationApp', ['ngAnimate','ngRoute','ngMap'])
+var app = angular.module('locationApp', ['ngAnimate','ngRoute','ngMap', 'ngResource'])
 
 app.config(function($routeProvider){
   $routeProvider
@@ -12,3 +12,5 @@ app.config(function($routeProvider){
     redirectTo: '/'
   });
 })
+
+
