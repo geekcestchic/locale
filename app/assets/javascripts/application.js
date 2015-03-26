@@ -17,5 +17,6 @@
 // require ng-resource.min
 // require google-maps.js
 //= require google-places.js
+//= require d3.js
 //= require app
 //= require_tree .

@@ -10,3 +10,7 @@ function getDistance(p1, p2) {
   var d = Math.round(R * c);
   return d; // returns the distance in meters
 }
+
+$(document).ready(function(){
+      //enter any code here that you would like to implement automatically
+});

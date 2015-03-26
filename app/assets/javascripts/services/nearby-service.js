@@ -15,18 +15,21 @@ app.factory('NearbyService', function($http,$resource){
 
     analysePropertyPrices: function(data){
       console.log('property prices',data);
-      if (data.listing.length===0){
-        alert('No properties in this area')
-      }
-      else if(data.disambiguation.length > 1){
-        alert('Please be more specific, here are some suggested options:'+data.disambiguation)
-      }
-      else{
+      // if (data.listing.length===0){
+      //   alert('No properties in this area')
+      // }
+      // else if(data.disambiguation.length > 1){
+      //   alert('Please be more specific, here are some suggested options:'+data.disambiguation)
+      // }
+      // else{
+
         var analysis ={
           numberOfProperties: data.listing.length,
-          averagePrices: 2000000
+          averageRentPrices: [],
+          averagePurchasePrices: 0
         };
-      }
+        if (data.listing_status === 'rent'){analysis.averageRentPrices}
+      // }
       
     },
 
