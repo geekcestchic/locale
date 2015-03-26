@@ -12,5 +12,5 @@ function getDistance(p1, p2) {
 }
 
 $(document).ready(function(){
-      //enter any code here that you would like to implement automatically
+    //Javascript we want to load upon page load
 });
