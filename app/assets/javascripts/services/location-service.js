@@ -27,48 +27,33 @@ app.factory('LocationService', function($http, $q){
     },
     
     countCrimes: function(currentLocation,crimes){
-      var firstRadius = 0;
-      var secondRadius = 0;
-      var thirdRadius = 0;
+      var crimeDistances = [];
       $.each(crimes, function(index,crime){
         var distance = LocationService.getDistance(currentLocation,crime.location)
-        if (distance <= 50) firstRadius += 1;
-        if (distance > 50 && distance <= 100) secondRadius += 1;
-        if (distance > 100 && distance <=200) thirdRadius += 1;
+        crimeDistances.push(distance)
       });
-      // LocationService.drawCrimeGraph(firstRadius,secondRadius,thirdRadius)
-      LocationService.drawCrimeHistogram()
-    },
-    
-    drawCrimeGraph: function(first,second,third){
-      $('crimes').find('p').empty();
-      $('.radius-one').css('height', first*10)
-      $('.radius-two').css('height', second*10)
-      $('.radius-three').css('height', third*10)
-      $('.radius-one').append('<p>'+first+'</p>')
-      $('.radius-two').append('<p>'+second+'</p>')
-      $('.radius-three').append('<p>'+third+'</p>')
-      $('crimes').prepend('<p>Crimes in the last month</p>')
+      crimeDistances = _.reject(crimeDistances, function(i){return i>200})
+      LocationService.drawHistogram(crimeDistances)
     },
 
-    drawCrimeHistogram: function(values){
+    drawHistogram: function(values){
       // Generate a Bates distribution of 10 random variables.
-      var values = d3.range(1000).map(d3.random.bates(10));
-
+      // var values = d3.range(1000).map(d3.random.bates(10));
+      console.log('values', values)
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
 
       var margin = {top: 10, right: 30, bottom: 30, left: 30},
-          width = 960 - margin.left - margin.right,
-          height = 500 - margin.top - margin.bottom;
+          width = 850 - margin.left - margin.right,
+          height = 400 - margin.top - margin.bottom;
 
       var x = d3.scale.linear()
-          .domain([0, 1])
+          .domain([0, 200])
           .range([0, width]);
 
       // Generate a histogram using twenty uniformly-spaced bins.
       var data = d3.layout.histogram()
-          .bins(x.ticks(20))
+          .bins(x.ticks(10))
           (values);
 
       var y = d3.scale.linear()
