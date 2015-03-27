@@ -2,7 +2,7 @@
 
 <div class="site-container" ng-controller="LocationController as Location">
   <div class="welcome">
-    <h1>I am the view</h1>
+    <h1>LOCALE</h1>
     <map ng-if="coordinates" 
     zoom="14" 
     center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
@@ -18,7 +18,8 @@
     </map>
     
     <form name="locationForm" ng-submit="returnStats(newLocation)">
-      <label>Please Enter a London Address:</label>
+      <label>Please Enter a valid London Address</label>
+      <label><i>(e.g. 413 Oxford Street, W1C2PF)</i></label>
       <input type="text" ng-model="newLocation">
       <button>SUBMIT</button>
     </form>

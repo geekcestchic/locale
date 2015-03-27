@@ -37,8 +37,6 @@ app.factory('LocationService', function($http, $q){
     },
 
     drawHistogram: function(values){
-      // Generate a Bates distribution of 10 random variables.
-      // var values = d3.range(1000).map(d3.random.bates(10));
       console.log('values', values)
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
@@ -47,11 +45,11 @@ app.factory('LocationService', function($http, $q){
           width = 850 - margin.left - margin.right,
           height = 400 - margin.top - margin.bottom;
 
-      var x = d3.scale.linear()
+      var x = d3.scale.linear()  //defining the xscale
           .domain([0, 200])
           .range([0, width]);
 
-      // Generate a histogram using twenty uniformly-spaced bins.
+      // Generate a histogram using x uniformly-spaced bins.
       var data = d3.layout.histogram()
           .bins(x.ticks(10))
           (values);
@@ -92,6 +90,9 @@ app.factory('LocationService', function($http, $q){
           .attr("class", "x axis")
           .attr("transform", "translate(0," + height + ")")
           .call(xAxis);
+
+      bar.transition()
+          .attr("background-color","yellow")
     },
     
     getDistance: function(p1, p2) {
