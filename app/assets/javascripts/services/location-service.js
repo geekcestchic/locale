@@ -90,9 +90,6 @@ app.factory('LocationService', function($http, $q){
           .attr("class", "x axis")
           .attr("transform", "translate(0," + height + ")")
           .call(xAxis);
-
-      bar.transition()
-          .attr("background-color","yellow")
     },
     
     getDistance: function(p1, p2) {
