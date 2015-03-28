@@ -45,27 +45,27 @@ app.factory('NearbyService', function($http,$resource){
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);
       function callback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          var stationObject = results[0];
-          var formattedCurrentLocation = {
-            latitude: latitude,
-            longitude: longitude
+        for (var i = 0; i < 5; i++) {
+          if (status == google.maps.places.PlacesServiceStatus.OK) {
+            var stationObject = results[i];
+            var formattedCurrentLocation = {
+              latitude: latitude,
+              longitude: longitude
+            };
+            closestStations[i] = { //formatting our own object, so we can then pass it to calculate the distance
+              name: stationObject.name,
+              latitude: stationObject.geometry.location.k,
+              longitude: stationObject.geometry.location.D  
+            };
+            closestStations[i].distance = getDistance(formattedCurrentLocation, closestStations[i]);
           };
-          var station = { //formatting our own object, so we can then pass it to calculate the distance
-            name: stationObject.name,
-            latitude: stationObject.geometry.location.k,
-            longitude: stationObject.geometry.location.D  
-          };
-          station.distance = getDistance(formattedCurrentLocation, station);
         };
-        NearbyService.showClosestStation(station);
+        NearbyService.showClosestStations(closestStations);
       };
     },
 
-    showClosestStation: function(station){
-      $('stations').append('<h1>Closest Tube Station</h1>')
-      $('stations').append('<p>'+station.name+'</p>')
-      $('stations').append('<p>'+station.distance+'m away</p>')
+    showClosestStations: function(stations){
+      console.log('stations',stations)
     }
 
   };

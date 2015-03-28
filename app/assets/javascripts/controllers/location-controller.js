@@ -19,6 +19,7 @@ app.controller('LocationController', function($scope, $rootScope, $timeout, $htt
       $scope.coordinatesForStation = data;
       $scope.$on('mapInitialized', function(event, map){
         $scope.map = map
+        //getting the closest station from Google places
         NearbyService.getClosestStation($scope.map, data.latitude, data.longitude)
       });    
     })
