@@ -13,4 +13,9 @@ function getDistance(p1, p2) {
 
 $(document).ready(function(){
     //Javascript we want to load upon page load
+    caca = [1,2,3,4,5]
+    var pipi = _.reject(caca,function(num){
+      return num > 3
+    })
+    console.log(caca, pipi)
 });

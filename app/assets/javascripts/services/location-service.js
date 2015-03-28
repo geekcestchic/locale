@@ -37,12 +37,11 @@ app.factory('LocationService', function($http, $q){
     },
 
     drawHistogram: function(values){
-      console.log('values', values)
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
 
       var margin = {top: 10, right: 30, bottom: 30, left: 30},
-          width = 850 - margin.left - margin.right,
+          width = 700 - margin.left - margin.right,
           height = 400 - margin.top - margin.bottom;
 
       var x = d3.scale.linear()  //defining the xscale
@@ -51,8 +50,7 @@ app.factory('LocationService', function($http, $q){
 
       // Generate a histogram using x uniformly-spaced bins.
       var data = d3.layout.histogram()
-          .bins(x.ticks(10))
-          (values);
+          .bins(x.ticks(10))(values);
 
       var y = d3.scale.linear()
           .domain([0, d3.max(data, function(d) { return d.y; })])

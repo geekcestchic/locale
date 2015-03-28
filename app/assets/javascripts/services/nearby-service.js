@@ -6,7 +6,8 @@ app.factory('NearbyService', function($http,$resource){
       var formattedAddress = address.replace(',','').split(' ').join('+');
       $http.post('static/get_property_prices', {data:{area:formattedAddress}})
       .success(function(data, status) {
-        NearbyService.analysePropertyPrices(data)
+        //let us format the data first
+        NearbyService.analysePropertyPrices(data.listing)
       })
       .error(function(data, status) {
         console.log(data) || "Request failed";
@@ -15,21 +16,52 @@ app.factory('NearbyService', function($http,$resource){
 
     analysePropertyPrices: function(data){
       console.log('property prices',data);
-      // if (data.listing.length===0){
-      //   alert('No properties in this area')
-      // }
+      if (data.length===0){
+        alert('No properties in this area')
+      }
       // else if(data.disambiguation.length > 1){
       //   alert('Please be more specific, here are some suggested options:'+data.disambiguation)
       // }
-      // else{
-
+      else{
         var analysis ={
-          numberOfProperties: data.listing.length,
-          averageRentPrices: [],
-          averagePurchasePrices: 0
+          numberOfProperties: data.length,
+          rentDistribution: {firstRange:0,secondRange:0,thirdRange:0, fourthRange:0},
+          saleDistribution: {firstRange:0,secondRange:0,thirdRange:0, fourthRange:0},
+          averagerent: 0,
+          averagePurchasePrice: 0
         };
-        if (data.listing_status === 'rent'){analysis.averageRentPrices}
-      // }
+        _.each(data, function(listing){
+          if (listing.listing_status === 'rent' && listing.num_bedrooms !== 0 && listing.num_bedrooms < 5){
+            
+            var rentPerRoom = listing.rental_prices.per_week / listing.num_bedrooms;
+            console.log('rent/room',rentPerRoom);
+            // var first = _.reject(data,function(listing){
+            //   return rentPerRoom > 100 //Rooms cheaper than £100pw
+            // });
+            // analysis.rentDistribution.firstRange += first.length
+
+            // var second = _.reject(data,function(listing){
+            //   return rentPerRoom <= 100 && rentPerRoom > 200 //Rooms between £101 and £200pw
+            // });
+            // analysis.rentDistribution.secondRange += second.length
+
+            // var third = _.reject(data,function(listing){
+            //   return rentPerRoom <= 200  && rentPerRoom > 300 //Rooms between £201 and £300pw
+            // });
+            // analysis.rentDistribution.thirdRange += third.length
+
+            // var fourth = _.reject(data,function(listing){
+            //   return rentPerRoom <= 300 //Rooms over £300pw 
+            // });
+            // analysis.rentDistribution.fourthRange += fourth.length
+          }
+          else if(listing.listing_status === 'sale' && listing.num_bedrooms !== 0 && listing.num_bedrooms < 5){
+            var pricePerRoom = listing.price / listing.num_bedrooms
+            console.log('price/room', pricePerRoom)
+          }
+        });
+        console.log('analysis',analysis)
+      }
       
     },
 
@@ -65,7 +97,67 @@ app.factory('NearbyService', function($http,$resource){
     },
 
     showClosestStations: function(stations){
-      console.log('stations',stations)
+
+      var dataset = stations
+
+     //Width and height
+     var w = 800;
+     var h = 300;
+     var padding = 30;
+     
+     //Create scale functions
+     var xScale = d3.scale.linear()
+                .domain([0, d3.max(dataset, function(d) { return d.distance; })])
+                .range([padding, w - padding * 2]);
+
+     //Define X axis
+     var xAxis = d3.svg.axis()
+               .scale(xScale)
+               .orient("bottom")
+               .ticks(5);
+
+     //Create SVG element
+     var svg = d3.select("stations")
+       .append("svg")
+       .attr("width", w)
+       .attr("height", h);
+
+     //Create lines
+     svg.selectAll("line")
+         .data(dataset)
+         .enter()
+         .append("line")
+         .attr("x1", function(d){
+           return xScale(d.distance);
+         })
+         .attr("x2", function(d){
+           return xScale(d.distance);
+         })
+         .attr("y1", h-padding)
+         .attr("y2", padding+50)
+         .attr("stroke", "black")
+         .attr("stroke-width", "1")
+         .attr("stroke-linecap", "round")
+
+
+     //Create Labels
+     svg.selectAll("text")
+         .data(dataset)
+         .enter()
+         .append("text")
+         .text(function(d){
+           return d.name
+         })
+         .attr("x",function(d){
+           return xScale(d.distance)-30
+         })
+         .attr("y",padding+50)
+
+     //Create X axis
+     svg.append("g")
+       .attr("class", "axis")
+       .attr("transform", "translate(0," + (h - padding) + ")")
+       .call(xAxis);
     }
 
   };
