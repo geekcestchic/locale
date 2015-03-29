@@ -1,1 +1,16 @@
+property-prices{
+  .bar rect {
+    fill: rgba(122,205,206,1);
+    shape-rendering: crispEdges;
+  }
 
+  .bar text {
+    fill: #fff;
+  }
+
+  .axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+}
