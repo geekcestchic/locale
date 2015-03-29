@@ -32,32 +32,14 @@ app.factory('NearbyService', function($http,$resource){
         };
         _.each(data, function(listing){
           if (listing.listing_status === 'rent' && listing.num_bedrooms !== 0 && listing.num_bedrooms < 5){
-            
             var rentPerRoom = listing.rental_prices.per_week / listing.num_bedrooms;
-            console.log('rent/room',rentPerRoom);
-            // var first = _.reject(data,function(listing){
-            //   return rentPerRoom > 100 //Rooms cheaper than £100pw
-            // });
-            // analysis.rentDistribution.firstRange += first.length
-
-            // var second = _.reject(data,function(listing){
-            //   return rentPerRoom <= 100 && rentPerRoom > 200 //Rooms between £101 and £200pw
-            // });
-            // analysis.rentDistribution.secondRange += second.length
-
-            // var third = _.reject(data,function(listing){
-            //   return rentPerRoom <= 200  && rentPerRoom > 300 //Rooms between £201 and £300pw
-            // });
-            // analysis.rentDistribution.thirdRange += third.length
-
-            // var fourth = _.reject(data,function(listing){
-            //   return rentPerRoom <= 300 //Rooms over £300pw 
-            // });
-            // analysis.rentDistribution.fourthRange += fourth.length
+            if (rentPerRoom < 100){analysis.rentDistribution.firstRange += 1}
+            if (rentPerRoom > 100 && rentPerRoom <=200){analysis.rentDistribution.secondRange += 1}
+            if (rentPerRoom > 200 && rentPerRoom <=300){analysis.rentDistribution.thirdRange += 1}
+            if (rentPerRoom > 300){analysis.rentDistribution.fourthRange += 1}
           }
           else if(listing.listing_status === 'sale' && listing.num_bedrooms !== 0 && listing.num_bedrooms < 5){
             var pricePerRoom = listing.price / listing.num_bedrooms
-            console.log('price/room', pricePerRoom)
           }
         });
         console.log('analysis',analysis)
