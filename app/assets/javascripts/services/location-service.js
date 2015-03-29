@@ -63,7 +63,7 @@ app.factory('LocationService', function($http, $q){
       var svg = d3.select("crimes").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
-        .append("g")
+          .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
       var bar = svg.selectAll(".bar")

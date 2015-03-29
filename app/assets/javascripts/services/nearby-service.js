@@ -7,44 +7,37 @@ app.factory('NearbyService', function($http,$resource){
       $http.post('static/get_property_prices', {data:{area:formattedAddress}})
       .success(function(data, status) {
         //let us format the data first
-        NearbyService.analysePropertyPrices(data.listing)
+        NearbyService.graphPropertyPrices(data)
       })
       .error(function(data, status) {
         console.log(data) || "Request failed";
       });
     },
 
-    analysePropertyPrices: function(data){
-      console.log('property prices',data);
-      if (data.length===0){
-        alert('No properties in this area')
-      }
-      // else if(data.disambiguation.length > 1){
-      //   alert('Please be more specific, here are some suggested options:'+data.disambiguation)
-      // }
-      else{
-        var analysis ={
-          numberOfProperties: data.length,
-          rentDistribution: {firstRange:0,secondRange:0,thirdRange:0, fourthRange:0},
-          saleDistribution: {firstRange:0,secondRange:0,thirdRange:0, fourthRange:0},
-          averagerent: 0,
-          averagePurchasePrice: 0
-        };
-        _.each(data, function(listing){
-          if (listing.listing_status === 'rent' && listing.num_bedrooms !== 0 && listing.num_bedrooms < 5){
-            var rentPerRoom = listing.rental_prices.per_week / listing.num_bedrooms;
-            if (rentPerRoom < 100){analysis.rentDistribution.firstRange += 1}
-            if (rentPerRoom > 100 && rentPerRoom <=200){analysis.rentDistribution.secondRange += 1}
-            if (rentPerRoom > 200 && rentPerRoom <=300){analysis.rentDistribution.thirdRange += 1}
-            if (rentPerRoom > 300){analysis.rentDistribution.fourthRange += 1}
-          }
-          else if(listing.listing_status === 'sale' && listing.num_bedrooms !== 0 && listing.num_bedrooms < 5){
-            var pricePerRoom = listing.price / listing.num_bedrooms
-          }
-        });
-        console.log('analysis',analysis)
-      }
+    graphPropertyPrices: function(data){
+      var dataset = data;
+      console.log(dataset)
+      //Width and height
+      var w = 800;
+      var h = 300;
+      var padding = 30;
       
+      //defining the scale
+      var xScale = d3.scale.linear()
+                 .domain([0, data.length-1])
+                 .range([padding, w - padding * 2]);
+
+      var yScale = d3.scale.linear()
+                 .domain([function(d){min(d)},function(d){(max(d))}])
+      //x Axis
+      var xAxis = d3.svg.axis()
+          .scale(x)
+          .orient("bottom");
+
+      var yAxis = d3.svg.axis()
+          .scale(y)
+          .orient("left")
+          .ticks(10);
     },
 
     getClosestStation: function(map,latitude,longitude){
