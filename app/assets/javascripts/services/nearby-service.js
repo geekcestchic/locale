@@ -17,27 +17,6 @@ app.factory('NearbyService', function($http,$resource){
     graphPropertyPrices: function(data){
       var dataset = data;
       console.log(dataset)
-      //Width and height
-      var w = 800;
-      var h = 300;
-      var padding = 30;
-      
-      //defining the scale
-      var xScale = d3.scale.linear()
-                 .domain([0, data.length-1])
-                 .range([padding, w - padding * 2]);
-
-      var yScale = d3.scale.linear()
-                 .domain([function(d){min(d)},function(d){(max(d))}])
-      //x Axis
-      var xAxis = d3.svg.axis()
-          .scale(x)
-          .orient("bottom");
-
-      var yAxis = d3.svg.axis()
-          .scale(y)
-          .orient("left")
-          .ticks(10);
     },
 
     getClosestStation: function(map,latitude,longitude){
