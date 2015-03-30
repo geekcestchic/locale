@@ -56,13 +56,15 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
      var xAxis = d3.svg.axis()
                .scale(rScale)
                .orient("bottom")
-               .ticks(4);
+               .ticks(3);
 
      //Create SVG element
      var svg = d3.select("stations")
        .append("svg")
        .attr("width", w)
        .attr("height", h)
+       .attr("class","stations")
+       .append("g")
 
      //Create lines
      circle = svg.selectAll("circle")
