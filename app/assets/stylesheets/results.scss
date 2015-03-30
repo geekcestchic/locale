@@ -1,8 +1,25 @@
 .results{
-  background:mediumaquamarine;
+  border: 4px solid mediumaquamarine;
   top: 300%;
+  z-index:-1;
   map{
     width:50%;
     height:94.5%;
-  }    
+  } 
+  h1{
+    color:white;
+    margin:20px;
+  }   
+  competitors{
+    h1{
+      padding:20px;
+    }
+    width:50%;
+    height:100%;
+    position:absolute;
+    top:0%;
+    left:50%;
+    z-index:-1;
+    background:rgba(233,229,221,1);
+  }
 }

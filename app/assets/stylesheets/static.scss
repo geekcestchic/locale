@@ -3,10 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .nav{
   font-size:0;
+  z-index:1;
   li{
+    z-index:1;
     font-size:25px;
     display:inline-block;
-    background:purple;
+    background:#493843;
     width:25%;
     margin:0;
     text-align:center;
@@ -15,8 +17,13 @@
       text-decoration: none;
     }
   }
-  li:hover{
+  .active{
     background:mediumaquamarine;
+  }
+  li:hover{
+    a{
+      color:red;
+    }
   }
   
 }

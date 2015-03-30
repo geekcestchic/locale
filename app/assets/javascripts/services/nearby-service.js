@@ -27,8 +27,8 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
       console.log(dataset)
 
       var margin = {top: 10, right: 50, bottom: 30, left: 50},
-      width = 850 - margin.left - margin.right,
-      height = 400 - margin.top - margin.bottom;
+      width = 950 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
       var barPadding = 10;
       
       function urlToStreetName(url){
@@ -67,6 +67,7 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
           // .style("background","lightgrey") //so we can see the limits
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
+          .attr('class','property')
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
       
@@ -174,6 +175,7 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
         .attr("class","axis")
         .call(yAxis)
         .attr("font-size", "11px")
+        .attr("transform", "translate(" + -5 + ", 0)")
     },
 
     getClosestStation: function(map,latitude,longitude){
@@ -212,8 +214,8 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
       var dataset = stations
 
      //Width and height
-     var w = 800;
-     var h = 300;
+     var w = 950;
+     var h = 500;
      var padding = 30;
      
      //Create scale functions

@@ -41,8 +41,8 @@ app.factory('LocationService',['$http','$q', function($http, $q){
       var formatCount = d3.format(",.0f");
 
       var margin = {top: 10, right: 30, bottom: 30, left: 30},
-          width = 700 - margin.left - margin.right,
-          height = 400 - margin.top - margin.bottom;
+          width = 950 - margin.left - margin.right,
+          height = 500 - margin.top - margin.bottom;
 
       var x = d3.scale.linear()  //defining the xscale
           .domain([0, 200])

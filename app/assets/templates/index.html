@@ -1,6 +1,6 @@
 <div class="bigdiv welcome" ng-click="scrollTop(1)"><h1>Welcome to <i><u>Locale</u></i>, your location analysis tool</h1></div>
 <div class="bigdiv intro" ng-click="scrollTop(2)">
-  <h2>The way we work is pretty simple.<br>Input an address and we return some stats. You can also compare two addresses.<br><i>GET STARTED?</i></h2>
+  <h2>It's all pretty simple.<br>Input an address and we return some stats. You can also compare two addresses.<br><i>GET STARTED?</i></h2>
 </div>
 <div class="site-container">
   
@@ -55,6 +55,7 @@
       position="{{coordinates.latitude}}, {{coordinates.longitude}}">
       </marker>
     </map>
+    <competitors ng-show="Tab.isSet(1)"></competitors>
     <crimes ng-show="Tab.isSet(2)"></crimes>
     <stations ng-show="Tab.isSet(3)"></stations>
     <property-prices ng-show="Tab.isSet(4)"></property-prices>

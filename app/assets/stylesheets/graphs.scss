@@ -1,16 +1,20 @@
+
 property-prices{
+  .property{
+    background:lightgrey;
+  }
   .bar rect {
-    fill: rgba(122,205,206,1);
+    fill: white;
     shape-rendering: crispEdges;
   }
 
   .bar text {
-    fill: #fff;
+    fill: white;
   }
 
   .axis path, .axis line {
     fill: none;
-    stroke: #000;
+    stroke: white;
     shape-rendering: crispEdges;
   }
   .negative{
