@@ -1,4 +1,4 @@
-app.factory('NearbyService', function($http,$resource){
+app.factory('NearbyService',['$http','$resource', function($http,$resource){
   
   var NearbyService = {
 
@@ -268,4 +268,4 @@ app.factory('NearbyService', function($http,$resource){
 
   return NearbyService;
 
-});
+}]);

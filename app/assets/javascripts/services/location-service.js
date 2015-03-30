@@ -1,4 +1,4 @@
-app.factory('LocationService', function($http, $q){
+app.factory('LocationService',['$http','$q', function($http, $q){
   
   var LocationService = {
     
@@ -107,4 +107,4 @@ app.factory('LocationService', function($http, $q){
 
   return LocationService
 
-});
+}]);

@@ -1,4 +1,4 @@
-app.controller('LocationController', function($scope, $rootScope, $timeout, $http, $q, LocationService, NearbyService){
+app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','$q','LocationService','NearbyService',function($scope, $rootScope, $timeout, $http, $q, LocationService, NearbyService){
 
   $scope.returnStats =  function(address){
     //geocoding the address to use the crimes api
@@ -27,6 +27,6 @@ app.controller('LocationController', function($scope, $rootScope, $timeout, $htt
   //snazzy maps
   $scope.mapStyle = mapStyle;
 
-});
+}]);
 
 mapStyle = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
