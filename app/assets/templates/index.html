@@ -1,4 +1,4 @@
-<div class="bigdiv welcome"><h1>Welcome to Locale, your commercial analysis tool</h1></div>
+<div class="bigdiv welcome"><h1>Welcome to <i><u>Locale</u></i>, your location analysis tool</h1></div>
 <div class="bigdiv intro">
   <h2>The way we work is pretty simple.<br>Input an address and we return some stats. You can also compare two addresses.<br>GET STARTED?</h2>
 </div>
@@ -7,16 +7,18 @@
   <!-- WELCOME DIV -->
   <div class="bigdiv search">    
     <!-- INPUT FORM -->
+    
     <div class="circle-three circle">
-      <div class="circle-two circle">
-        <div class="circle-one circle">
-          <form name="locationForm" ng-submit="returnStats(newLocation)">
-            <label><h3>Please Enter a valid London Address<br><i>(e.g. 413 Oxford Street, W1C2PF)</i></h3></label>
-            <input type="text" ng-model="newLocation">
-            <button>SUBMIT</button>
-          </form>
+        <div class="circle-two circle">
+          <div class="circle-one circle">
+            <div class="line"></div>
+            <form name="locationForm" ng-submit="returnStats(newLocation)">
+              <label><h3>Please Enter a valid London Address<br><i>(e.g. 413 Oxford Street, W1C2PF)</i></h3></label>
+              <input type="text" ng-model="newLocation">
+              <button>SUBMIT</button>
+            </form>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 
