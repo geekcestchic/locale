@@ -1,13 +1,13 @@
-app.factory('NearbyService',['$http','$resource', function($http,$resource){
+app.factory('PropertyService',['$http', function($http){
   
-  var NearbyService = {
+  var PropertyService = {
 
     getPropertyPrices: function(address){
       var formattedAddress = address.replace(',','').split(' ').join('+');
       $http.post('static/get_property_prices', {data:{area:formattedAddress}})
       .success(function(data, status) {
         //let us format the data first
-        NearbyService.graphPropertyPrices(data)
+        PropertyService.graphPropertyPrices(data)
       })
       .error(function(data, status) {
         console.log(data) || "Request failed";
@@ -155,118 +155,10 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
         .call(yAxis)
         .attr("font-size", "11px")
         .attr("transform", "translate(" + -5 + ", 0)")
-    },
-
-    getClosestStation: function(map,latitude,longitude){
-      
-      var currentLocation = new google.maps.LatLng(latitude,longitude);
-      var closestStations = [];
-      var request = {
-          location: currentLocation,
-          rankBy: google.maps.places.RankBy.DISTANCE,
-          types: ['subway_station','train_station']
-        }; 
-      service = new google.maps.places.PlacesService(map);
-      service.nearbySearch(request, callback);
-      function callback(results, status) {
-        for (var i = 0; i < 3; i++) {
-          if (status == google.maps.places.PlacesServiceStatus.OK) {
-            var stationObject = results[i];
-            var formattedCurrentLocation = {
-              latitude: latitude,
-              longitude: longitude
-            };
-            closestStations[i] = { //formatting our own object, so we can then pass it to calculate the distance
-              name: stationObject.name,
-              latitude: stationObject.geometry.location.k,
-              longitude: stationObject.geometry.location.D  
-            };
-            closestStations[i].distance = getDistance(formattedCurrentLocation, closestStations[i]);
-          };
-        };
-        NearbyService.showClosestStations(closestStations);
-      };
-    },
-
-    showClosestStations: function(stations){
-
-     var dataset = stations
-     //Width and height
-     var w = $(window).width();
-     var h = $(window).height()/2;
-     var padding = 30;
-     var margin = {
-      right:300
-     }
-     
-     //Create scale functions
-     var rScale = d3.scale.linear()
-                .domain([
-                  d3.min(dataset,function(d){ return d.distance; }), 
-                  d3.max(dataset, function(d) { return d.distance; })
-                  ])
-                .range([30, (w - padding * 2)/4]);
-
-     //Define X axis
-     var xAxis = d3.svg.axis()
-               .scale(rScale)
-               .orient("bottom")
-               .ticks(5);
-
-     //Create SVG element
-     var svg = d3.select("stations")
-       .append("svg")
-       .attr("width", w)
-       .attr("height", h)
-
-     //Create lines
-     circle = svg.selectAll("circle")
-         .data(dataset)
-         .enter()
-         .append("circle")
-         .attr("r", function(d){
-           return rScale(d.distance);
-         })
-         .attr("cx", w/2-margin.right)
-         .attr("cy", h/2)
-         .style("fill","none")
-         .style("stroke","rgb(226,187,60)")
-         .style("stroke-width","3")
-         .style("stroke-style","dotted")
-
-      svg.selectAll('station')
-        .data(dataset)
-        .enter()
-        .append('text')
-        .attr('class','station')
-        .attr('x',function(d, i){
-          return w/2-margin.right + rScale(d.distance) - i*5 + 5
-        })
-        .attr('y',function(d, i){
-          return h/2-5 - i*30
-        })
-        .text(function(d){
-          return d.name + ' | ' + d.distance + 'm'
-        })
-        .attr('font-size',20)
-
-     svg.append('circle')
-        .attr('r',20)
-        .attr('class','yourlocation')
-        .attr("cx", w/2-margin.right)
-        .attr("cy", h/2)
-        .style("fill","red")
-
-     //Create X axis
-     svg.append("g")
-       .attr("class", "axis")
-       .attr("transform", "translate("+(w/2-margin.right)+","+h/2+")")
-       .call(xAxis)
-       .attr("font-size", "15px")
     }
 
   };
 
-  return NearbyService;
+  return PropertyService
 
 }]);

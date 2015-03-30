@@ -88608,3 +88608,3174 @@ Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:26:31 
 Processing by StaticController#get_property_prices as HTML
   Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
 Completed 200 OK in 149ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:28:03 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 162ms (Views: 161.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/services/nearby-service-a12c1c4465dca92028cf521c57b2319a.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/application-c40e4275194c3c5c4f3a173851955046.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:28:04 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:28:08 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 133ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 177ms (Views: 176.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/services/nearby-service-0c07ea89e0f99f9698feeaafaf768ce3.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/application-cb717e5d7e927ffcc995b5ae50d61661.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:28:16 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:28:20 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 84ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:30:23 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"e28hn"}, "static"=>{"data"=>{"area"=>"e28hn"}}}
+Completed 200 OK in 134ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 183ms (Views: 182.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/services/nearby-service-bc7051f33dffe736c7a20be988b7b863.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/application-c236744665011640203b07c71e67d101.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:33:52 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:33:57 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 136ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:34:03 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:34:03 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:34:03 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:34:03 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:34:03 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:34:03 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 159ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/application-69f4803fb1ff98b517f777860c463a6b.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/services/nearby-service-c9453c4804c9d30fd916c775c0300752.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:07 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:35:08 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:35:13 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 140ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 204ms (Views: 203.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/services/nearby-service-7643c1a8615a5c34b35e28302423641e.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/application-e051daad13cf2b8736ab844876c145e3.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:35:38 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:35:42 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 108ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 137ms (Views: 136.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/services/nearby-service-7643c1a8615a5c34b35e28302423641e.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/application-e051daad13cf2b8736ab844876c145e3.js?body=1" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:35:56 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:36:00 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 126ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 165ms (Views: 164.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/services/nearby-service-c9453c4804c9d30fd916c775c0300752.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/application-69f4803fb1ff98b517f777860c463a6b.js?body=1" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:36:07 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:36:11 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 89ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 172ms (Views: 171.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/services/nearby-service-310cbc2a13ececff7263c25d428a5c9f.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/application-20f79f3320cfc6ba54368fcead05c6bb.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:37:42 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:37:47 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 143ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:39:39 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 172ms (Views: 172.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/services/nearby-service-06a69e256414fb7ed599e25f72f8b256.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/application-f74fdc32ef8f97292766abd40ac5a51c.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:39:40 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:39:45 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 140ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 212ms (Views: 211.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/services/nearby-service-980e90c7ead7feb78c03745b91444326.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/application-2078770566a4dae956ebd0564780ae53.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:41:27 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 172ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/services/nearby-service-8125afba6eac0299e948f398d8afbe44.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/application-b989f82c0ec0ac970bb44f0cc704eddb.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:41:48 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:41:53 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 246ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:00 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:00 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:00 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:00 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:00 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:00 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 159ms (Views: 158.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/services/nearby-service-44380f5a4eb5d8a7622a948da2928e4c.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/application-26f66b0feb6cddafdeaabd871011be9a.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/services/nearby-service-44380f5a4eb5d8a7622a948da2928e4c.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:21 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:42:22 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:42:22 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:42:22 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:42:22 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:42:22 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:42:22 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:42:22 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:42:26 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 111ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 169ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/services/nearby-service-f9ed6c31494612ad0bb844436bce551d.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/application-a8a5cd14edbe71ef1a28ef851cc33fd8.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:42:38 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:42:42 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 84ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 170ms (Views: 169.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/application-204d88e68021f0994712b26743caa52d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/services/nearby-service-a4247b49b90f57e21f42a75b9ac6ff2d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/application-204d88e68021f0994712b26743caa52d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/services/nearby-service-a4247b49b90f57e21f42a75b9ac6ff2d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/services/nearby-service-a4247b49b90f57e21f42a75b9ac6ff2d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/application-204d88e68021f0994712b26743caa52d.js?body=1" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:43:39 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:43:43 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 111ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 160ms (Views: 159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/application-63484f554d8701f8fb4147bd013e23ef.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/services/nearby-service-b88185783a71749ddb0ed84bf95f136d.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:44:07 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:44:14 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"e28hnlondon"}, "static"=>{"data"=>{"area"=>"e28hnlondon"}}}
+Completed 200 OK in 156ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 120ms (Views: 119.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/services/nearby-service-b88185783a71749ddb0ed84bf95f136d.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/application-63484f554d8701f8fb4147bd013e23ef.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:44:28 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:44:32 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 89ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 171ms (Views: 170.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/services/nearby-service-752d395715ed6e12b9efc8efb3de53d4.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/application-a729269a10fc4a23a807e79fdbb15379.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:45:12 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:45:16 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 126ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:23 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:23 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:23 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:23 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:23 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:45:23 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 172ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+
+
+Started GET "/assets/services/nearby-service-2f0a2c421e349015819b7716e7a681ed.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:56 +0100
+
+
+Started GET "/assets/application-024f685284240e0a5fb3825723ed40c1.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/application-024f685284240e0a5fb3825723ed40c1.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/services/nearby-service-2f0a2c421e349015819b7716e7a681ed.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/application-024f685284240e0a5fb3825723ed40c1.js?body=1" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:46:57 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 198ms (Views: 196.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/services/nearby-service-2f0a2c421e349015819b7716e7a681ed.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/application-024f685284240e0a5fb3825723ed40c1.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:01 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:47:02 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:47:02 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:47:02 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:47:02 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:47:02 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:47:02 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:47:02 +0100
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:12 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:12 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:12 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:12 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:12 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:12 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 231ms (Views: 230.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/services/nearby-service-ce2dbe951bf7f664c686dd3f8324b8cd.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/application-ff51d8c80ed5d11a7fab32e0e869e107.js?body=1" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:47:51 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:47:52 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:47:52 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:47:52 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:47:52 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:47:52 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:47:52 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:47:57 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 151ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/services/nearby-service-ce2dbe951bf7f664c686dd3f8324b8cd.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/application-ff51d8c80ed5d11a7fab32e0e869e107.js?body=1" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:48:10 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:48:15 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 102ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 175ms (Views: 174.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/services/nearby-service-28643a7117cab9ab1c1ddd03ae6b5a2b.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/application-d14331701fd445b5132ea031ac6e8918.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:51:47 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:51:48 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:51:55 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 140ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:11 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:11 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:11 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:11 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:11 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:11 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 167ms (Views: 166.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/application-40484db003a75894a2e7054f2359cc3c.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/services/nearby-service-1fcbff74a8fd20e9cbb6fd299020c5f4.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:52:21 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:52:26 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"w11+london"}, "static"=>{"data"=>{"area"=>"w11+london"}}}
+Completed 200 OK in 175ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:36 +0100
+
+
+Started GET "/assets/services/nearby-service-1fcbff74a8fd20e9cbb6fd299020c5f4.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/application-40484db003a75894a2e7054f2359cc3c.js?body=1" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 19:52:37 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 19:52:41 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"sw11+london"}, "static"=>{"data"=>{"area"=>"sw11+london"}}}
+Completed 200 OK in 114ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 20:33:10 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 146ms (Views: 145.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/services/nearby-service-1fcbff74a8fd20e9cbb6fd299020c5f4.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/application-40484db003a75894a2e7054f2359cc3c.js?body=1" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 20:33:11 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 20:33:24 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"n17jh+london"}, "static"=>{"data"=>{"area"=>"n17jh+london"}}}
+Completed 200 OK in 251ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 196ms (Views: 195.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/services/nearby-service-820583508a724a9619f083f15b3b4643.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/results-a3f746fb61c828f74cdf9fec5024ee54.css?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/application-53f948719d57fb92eb3bda1f777a543e.css?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/application-d369c775744c5ae19d3111c2e7464277.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 20:35:35 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 20:35:36 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 20:35:36 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 20:35:36 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 20:35:36 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 20:35:40 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"w11+london"}, "static"=>{"data"=>{"area"=>"w11+london"}}}
+Completed 200 OK in 229ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 188ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/results-b6af53f71fe66fd702b7ab1eb91ccdb7.css?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/application-d91e0e448bf293e84d4f87230f68af40.css?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/controllers/location-controller-324e2c45c7074f2e4b947e9c598a0384.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/services/location-service-6708a41d30f80ce3c55dc7caa9ac64ab.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/services/nearby-service-820583508a724a9619f083f15b3b4643.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/application-d369c775744c5ae19d3111c2e7464277.js?body=1" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 20:37:01 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 20:37:07 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"notting+hill+london"}, "static"=>{"data"=>{"area"=>"notting+hill+london"}}}
+Completed 200 OK in 123ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 20:37:07 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 20:47:36 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 252ms (Views: 251.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/results-b6af53f71fe66fd702b7ab1eb91ccdb7.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/controllers/location-controller-c0fb4283b30723c610e144415055708f.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/services/crime-service-0e08c977feeccb34f7cf7a91f7ab86e8.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/services/property-service-3ab709195610eb7dee55d14f8e5d8189.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/application-d91e0e448bf293e84d4f87230f68af40.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/services/location-service-d37b03c05491ca044829305535709868.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/application-c5f90c8143ca5751b0d1173dedf429f7.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/services/station-service-501de8f11914d9381481981a55fe606d.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 20:47:37 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:40 +0100
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:40 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:40 +0100
+
+
+Started GET "/assets/results-b6af53f71fe66fd702b7ab1eb91ccdb7.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:40 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:40 +0100
+
+
+Started GET "/assets/application-d91e0e448bf293e84d4f87230f68af40.css?body=1" for 127.0.0.1 at 2015-03-30 20:47:40 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 20:48:30 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 214ms (Views: 213.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/results-b6af53f71fe66fd702b7ab1eb91ccdb7.css?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/application-d91e0e448bf293e84d4f87230f68af40.css?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/controllers/location-controller-c0fb4283b30723c610e144415055708f.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/services/crime-service-92085fd36c7ab0c5fface5630d720e34.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/services/property-service-a15a501d83499f8ed0ce1e97c4f3d5e8.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/services/station-service-501de8f11914d9381481981a55fe606d.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/application-f247cf1ea0c722fd6b07e34ffd67c616.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/services/location-service-d37b03c05491ca044829305535709868.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/services/property-service-a15a501d83499f8ed0ce1e97c4f3d5e8.js?body=1" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 20:48:31 +0100
+
+
+Started GET "/assets/services/station-service-501de8f11914d9381481981a55fe606d.js?body=1:131:10" for 127.0.0.1 at 2015-03-30 20:48:36 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 175ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/results-b6af53f71fe66fd702b7ab1eb91ccdb7.css?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/application-d91e0e448bf293e84d4f87230f68af40.css?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/controllers/location-controller-c0fb4283b30723c610e144415055708f.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/services/location-service-d37b03c05491ca044829305535709868.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/services/crime-service-92085fd36c7ab0c5fface5630d720e34.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/services/property-service-a15a501d83499f8ed0ce1e97c4f3d5e8.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/services/station-service-8ecefdddbd9cea9df29f88a7009b560c.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/application-9935a88141d40137aa5eaa3661e35b71.js?body=1" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/london.jpg" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started GET "/assets/grand-central.jpg" for 127.0.0.1 at 2015-03-30 20:49:01 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 20:49:21 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"w4+london"}, "static"=>{"data"=>{"area"=>"w4+london"}}}
+Completed 200 OK in 157ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 171ms (Views: 170.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crime-f828959d0f387fba83b2d73bff9d6373.css?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/graphs-c6c6e4fc4a1733c1bf962473f5c54839.css?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/services/station-service-03e6dfbc6ac26aaedf91077c02b1275a.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/application-26f78eedc36ccb7bd171b8bb04ddaf2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/main-a67547ca51efa5bcba450de53d021358.css?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/results-b6af53f71fe66fd702b7ab1eb91ccdb7.css?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/underscore-d431f9168936f2543e94df66a0ed8c23.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/static-6daf6f02897a1d9d0609d22909bce18d.css?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/application-d91e0e448bf293e84d4f87230f68af40.css?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/ng-map.min-ca26a2a2b114e0fe37ce7bfa0396896d.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/d3-c8df7cfbbfefaeb8480dd257b3606319.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/app-b78df2ee6c65bba6c4de0ea31c4a29a8.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/controllers/location-controller-c0fb4283b30723c610e144415055708f.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/controllers/tab-controller-8fe8caeced7c56b7882a6ca26c32062f.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/helper-d2f93eb70b5e7b410e87a098106f8de5.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/location-directives-aabdb0fa880e48a400d3ac874e535335.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/services/crime-service-92085fd36c7ab0c5fface5630d720e34.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/services/location-service-d37b03c05491ca044829305535709868.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/services/property-service-a15a501d83499f8ed0ce1e97c4f3d5e8.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-30 20:51:32 +0100
+
+
+Started GET "/assets/index-350eb8c083299d9505e5885a2cc87c8b.html" for 127.0.0.1 at 2015-03-30 20:51:33 +0100
+
+
+Started GET "/assets/competitors-02fb24ff5bf9c5a506e658cc332bce9e.html" for 127.0.0.1 at 2015-03-30 20:51:33 +0100
+
+
+Started GET "/assets/crime-graph-d777fd8f0eb6210b133828f17a4f77c9.html" for 127.0.0.1 at 2015-03-30 20:51:33 +0100
+
+
+Started GET "/assets/closest-stations-817eb3cd759f17046b255b9b498172f0.html" for 127.0.0.1 at 2015-03-30 20:51:33 +0100
+
+
+Started GET "/assets/property-prices-838ee7e6d1dd10a3709d9c9a2675d2ee.html" for 127.0.0.1 at 2015-03-30 20:51:33 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 20:51:37 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"w4+london"}, "static"=>{"data"=>{"area"=>"w4+london"}}}
+Completed 200 OK in 212ms (Views: 1.3ms | ActiveRecord: 0.0ms)

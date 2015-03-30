@@ -1,18 +1,18 @@
-app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','$q','LocationService','NearbyService',function($scope, $rootScope, $timeout, $http, $q, LocationService, NearbyService){
+app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','$q','LocationService','CrimeService','PropertyService','StationService' ,function($scope, $rootScope, $timeout, $http, $q, LocationService, CrimeService, PropertyService,StationService){
 
   $scope.returnStats =  function(address){
     //geocoding the address to use the crimes api
     LocationService.codeAddress(address)  // Geocoding the address, see Location Service
     .then(function(data) {
       $scope.coordinates = data;
-      return LocationService.getCrimes(data.latitude, data.longitude)  // Getting Data from Crimes API
+      return CrimeService.getCrimes(data.latitude, data.longitude)  // Getting Data from Crimes API
     })
     .then(function(crimesObject) {
       $scope.crimes = crimesObject.data;
-      LocationService.countCrimes($scope.coordinates, $scope.crimes);
+      CrimeService.countCrimes($scope.coordinates, $scope.crimes);
     });
     //Zoopla API
-    NearbyService.getPropertyPrices(address)
+    PropertyService.getPropertyPrices(address)
     //geocoding the address to use the google places API to find the closest station
     LocationService.codeAddress(address)
     .then(function(data){
@@ -20,7 +20,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
       $scope.$on('mapInitialized', function(event, map){
         $scope.map = map
         //getting the closest station from Google places
-        NearbyService.getClosestStation($scope.map, data.latitude, data.longitude)
+        StationService.getClosestStation($scope.map, data.latitude, data.longitude)
       });    
     })
   };
