@@ -27,6 +27,11 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   //snazzy maps
   $scope.mapStyle = mapStyle;
 
+  $scope.scrollTop = function(n){
+    var windowHeight = $(window).height()
+    $("html, body").animate({ scrollTop: n * windowHeight });
+  }
+
 }]);
 
 mapStyle = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
