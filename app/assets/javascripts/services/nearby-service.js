@@ -16,9 +16,9 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
 
     graphPropertyPrices: function(data){
       var dataset = data.areas
-      var dataset = _.reject(dataset,function(area){
-        return area.average_sold_price_1year === 0;
-      })      
+      // var dataset = _.reject(dataset,function(area){
+      //   return area.average_sold_price_1year === 0;
+      // })      
       console.log(dataset)
 
     //   var margin = {top: 10, right: 50, bottom: 30, left: 50},

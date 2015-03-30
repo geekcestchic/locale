@@ -49218,3 +49218,9 @@ Started GET "/assets/closest-stations.html" for ::1 at 2015-03-30 09:26:01 +0100
 
 
 Started GET "/assets/property-prices.html" for ::1 at 2015-03-30 09:26:01 +0100
+
+
+Started POST "/static/get_property_prices" for 127.0.0.1 at 2015-03-30 09:36:21 +0100
+Processing by StaticController#get_property_prices as HTML
+  Parameters: {"data"=>{"area"=>"138+kingsland+road+london"}, "static"=>{"data"=>{"area"=>"138+kingsland+road+london"}}}
+Completed 200 OK in 1237ms (Views: 1.8ms | ActiveRecord: 0.0ms)
