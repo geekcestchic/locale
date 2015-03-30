@@ -3,7 +3,7 @@ app.factory('LocationService',['$http','$q', function($http, $q){
   var LocationService = {
     
     getCrimes: function(latitude,longitude){
-      return $http.get('http://data.police.uk/api/crimes-street/all-crime?lat='+latitude+'&lng='+longitude);
+      return $http.get('https://data.police.uk/api/crimes-street/all-crime?lat='+latitude+'&lng='+longitude);
       $scope.newLocation = false;
       Location.locationForm.$setPristine();
     },
