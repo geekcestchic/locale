@@ -33,16 +33,17 @@ app.factory('LocationService',['$http','$q', function($http, $q){
         crimeDistances.push(distance)
       });
       crimeDistances = _.reject(crimeDistances, function(i){return i>200})
-      LocationService.drawHistogram(crimeDistances)
+      LocationService.drawCrimeHistogram(crimeDistances)
     },
 
-    drawHistogram: function(values){
+    drawCrimeHistogram: function(values){
+      d3.select("crimes").clear
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
 
-      var margin = {top: 10, right: 30, bottom: 30, left: 30},
-          width = 950 - margin.left - margin.right,
-          height = 500 - margin.top - margin.bottom;
+      var margin = {top: 50, right: 300, bottom: 30, left: 30},
+          width = $(window).width() - margin.left - margin.right,
+          height = $(window).height()/2 - margin.top - margin.bottom;
 
       var x = d3.scale.linear()  //defining the xscale
           .domain([0, 200])
@@ -50,7 +51,7 @@ app.factory('LocationService',['$http','$q', function($http, $q){
 
       // Generate a histogram using x uniformly-spaced bins.
       var data = d3.layout.histogram()
-          .bins(x.ticks(10))(values);
+          .bins(x.ticks(8))(values);
 
       var y = d3.scale.linear()
           .domain([0, d3.max(data, function(d) { return d.y; })])
@@ -63,6 +64,7 @@ app.factory('LocationService',['$http','$q', function($http, $q){
       var svg = d3.select("crimes").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
+          .attr("class","crimes")
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -88,6 +90,21 @@ app.factory('LocationService',['$http','$q', function($http, $q){
           .attr("class", "x axis")
           .attr("transform", "translate(0," + height + ")")
           .call(xAxis);
+      
+      svg.append("text")
+          .attr("y", -20)
+          .attr("x", width/2)
+          .text(function(d){
+            return 'Location Name Will Appear Here'
+          })
+
+      svg.append("text")
+          .attr("y", height/2)
+          .attr("x", width+100)
+          .text(function(){
+            var numberOfCrimes = values.length;
+            return 'Total crimes committed '+numberOfCrimes
+          })
     },
     
     getDistance: function(p1, p2) {
@@ -106,5 +123,5 @@ app.factory('LocationService',['$http','$q', function($http, $q){
   }
 
   return LocationService
-
+  
 }]);

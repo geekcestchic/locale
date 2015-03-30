@@ -1,7 +1,5 @@
-
 property-prices{
   .property{
-    background:lightgrey;
   }
   .bar rect {
     fill: white;
@@ -22,4 +20,16 @@ property-prices{
     fill:red;
     color:red;
   }
+}
+
+stations{
+  .axis line {
+      fill: none;
+      stroke: red;
+      shape-rendering: crispEdges;
+  }
+}
+
+crimes{
+
 }

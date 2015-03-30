@@ -21,14 +21,11 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
         return area.average_sold_price_1year !== "0"
       })
 
-      //  dataset = _.reject(dataset,function(area){
-      //   return area.average_sold_price_1year == "0";
-      // })      
-      console.log(dataset)
+      console.log(data)      
 
-      var margin = {top: 10, right: 50, bottom: 30, left: 50},
-      width = 950 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+      var margin = {top: 10, right: 300, bottom: 30, left: 60},
+      width = $(window).width() - margin.left - margin.right,
+      height = $(window).height()/2 - margin.top - margin.bottom;
       var barPadding = 10;
       
       function urlToStreetName(url){
@@ -43,12 +40,8 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
       var yScale = d3.scale.linear()
                  .domain([
                   d3.max(dataset, function(d) { 
-                    return d.average_sold_price_1year; 
-                  }),
-                  d3.min(dataset,function(d){
-                    return 0;
-                  })
-                  ])
+                    return d.average_sold_price_1year;
+                  }),0])
                  .range([margin.bottom, height-margin.top]);
 
       //Define X axis
@@ -64,7 +57,6 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
 
       //Create SVG element
       var svg = d3.select("property-prices").append("svg")
-          // .style("background","lightgrey") //so we can see the limits
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .attr('class','property')
@@ -158,19 +150,6 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
           return yScale(d.average_sold_price_1year)-5;
          })
 
-      //Create X axis
-      // svg.append("g")
-      //   .attr("class", "axis")
-      //   .attr("transform", "translate(0," + height + ")")
-      //   .call(xAxis)
-        // .append("text")
-        //       // .attr("transform", "rotate(-90)")
-        //       .attr("x", width/2+margin.left)
-        //       // .attr("dy", ".71em")
-        //       .style("text-anchor", "end")
-        //       .text("Street Names");
-        // .call(yAxis);
-
       svg.append("g")
         .attr("class","axis")
         .call(yAxis)
@@ -190,7 +169,7 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);
       function callback(results, status) {
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 3; i++) {
           if (status == google.maps.places.PlacesServiceStatus.OK) {
             var stationObject = results[i];
             var formattedCurrentLocation = {
@@ -211,21 +190,25 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
 
     showClosestStations: function(stations){
 
-      var dataset = stations
-
+     var dataset = stations
      //Width and height
-     var w = 950;
-     var h = 500;
+     var w = $(window).width();
+     var h = $(window).height()/2;
      var padding = 30;
+     var margin = {
+      right:300
+     }
      
      //Create scale functions
-     var xScale = d3.scale.linear()
-                .domain([0, d3.max(dataset, function(d) { return d.distance; })])
-                .range([padding, w - padding * 2]);
+     var rScale = d3.scale.linear()
+                .domain([0, 
+                  d3.max(dataset, function(d) { return d.distance; })
+                  ])
+                .range([0, (w - padding * 2 - margin.right)/2]);
 
      //Define X axis
      var xAxis = d3.svg.axis()
-               .scale(xScale)
+               .scale(rScale)
                .orient("bottom")
                .ticks(5);
 
@@ -233,44 +216,67 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
      var svg = d3.select("stations")
        .append("svg")
        .attr("width", w)
-       .attr("height", h);
+       .attr("height", h)
 
      //Create lines
-     svg.selectAll("line")
+     circle = svg.selectAll("circle")
          .data(dataset)
          .enter()
-         .append("line")
-         .attr("x1", function(d){
-           return xScale(d.distance);
+         .append("circle")
+         .attr("r", function(d){
+           return rScale(d.distance);
          })
-         .attr("x2", function(d){
-           return xScale(d.distance);
-         })
-         .attr("y1", h-padding)
-         .attr("y2", padding+50)
-         .attr("stroke", "black")
-         .attr("stroke-width", "1")
-         .attr("stroke-linecap", "round")
+         .attr("cx", w/2-margin.right/2+padding)
+         .attr("cy", h/2)
+         .style("fill","none")
+         .style("stroke","black")
 
+      svg.selectAll('station')
+        .data(dataset)
+        .enter()
+        .append('text')
+        .attr('class','station')
+        .attr('x',function(d){
+          return w/2-margin.right/2+padding + rScale(d.distance)
+        })
+        .attr('y',h/2-5)
+        .text(function(d){
+          return d.name
+        })
+        .attr('font-size',10)
+        // .attr('transform','rotate(0,0,90)') //not working!
 
-     //Create Labels
-     svg.selectAll("text")
-         .data(dataset)
-         .enter()
-         .append("text")
-         .text(function(d){
-           return d.name
-         })
-         .attr("x",function(d){
-           return xScale(d.distance)-30
-         })
-         .attr("y",padding+50)
+      svg.selectAll('distances')
+        .data(dataset)
+        .enter()
+        .append('text')
+        .attr('class','distances')
+        .attr('x',function(d){
+          return w-margin.right+padding 
+        })
+        .attr('y',function(d,i){
+          return 20 + i*25
+        })
+        .text(function(d){
+          return d.name + ' | ' + d.distance + 'm'
+        })
+        .attr('font-size',10)
+
+     svg.selectAll('yourlocation')
+        .append('circle')
+        .attr('r',20)
+        .attr('class','yourlocation')
+        .attr("cx", w/2-margin.right+padding)
+        .attr("cy", h/2)
+        .style("fill","red")
+        .style("stroke","red")
 
      //Create X axis
      svg.append("g")
        .attr("class", "axis")
-       .attr("transform", "translate(0," + (h - padding) + ")")
-       .call(xAxis);
+       .attr("transform", "translate("+(w/2-margin.right/2+padding)+","+h/2+")")
+       .call(xAxis)
+       .attr("font-size", "8px")
     }
 
   };

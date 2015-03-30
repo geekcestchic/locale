@@ -8,7 +8,7 @@
     z-index:1;
     font-size:25px;
     display:inline-block;
-    background:#493843;
+    background:rgb(226,187,60);
     width:25%;
     margin:0;
     text-align:center;
@@ -18,12 +18,11 @@
     }
   }
   .active{
-    background:mediumaquamarine;
-  }
-  li:hover{
+    background-image:url('london.jpg');
+    background-size:cover;
+    background-attachment:fixed;
     a{
-      color:red;
+      color:mediumaquamarine;
     }
   }
-  
 }

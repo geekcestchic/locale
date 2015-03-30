@@ -13,7 +13,7 @@
           <div class="circle-one circle">
             <div class="line"></div>
             <form name="locationForm" ng-submit="returnStats(newLocation)">
-              <label><h3>Please Enter a valid London Address<br><i>(e.g. 413 Oxford Street, W1C2PF)</i></h3></label>
+              <label><h3>Enter a valid London address<br><i>(e.g. 413 Oxford Street, W1C 2PF)</i></h3></label>
               <input type="text" ng-model="newLocation">
               <button ng-click="scrollTop(4)">lookup</button>
             </form>
@@ -45,7 +45,8 @@
     <map ng-show="Tab.isSet(1)" 
     zoom="14" 
     center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
-    styles="{{mapStyle}}">
+    styles="{{mapStyle}}" 
+    disableDefaultUI="true">
       <transit-layer></transit-layer>
       <fusion-tables-layer query="{
         select: 'Geocodable address',
