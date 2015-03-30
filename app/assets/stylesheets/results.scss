@@ -5,23 +5,25 @@
   map{
     width:50%;
     height:94.5%;
+    margin-left: 50%;
   } 
-  h1{
-    color:mediumaquamarine;
+  h3{
+    font-family: 'Oswald', sans-serif;
+    color:white;
     padding:20px;
     background-image:url('london.jpg');
     background-size:cover;
     background-attachment:fixed;
   }   
   competitors{
-    h1{
+    h3{
       padding:40px;
     }
     width:50%;
     height:100%;
     position:absolute;
     top:0%;
-    left:50%;
+    left:0%;
     z-index:-1;
     // background:rgba(233,229,221,1);
   }

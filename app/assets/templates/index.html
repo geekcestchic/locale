@@ -47,11 +47,11 @@
     center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
     styles="{{mapStyle}}" 
     disableDefaultUI="true">
-      <transit-layer></transit-layer>
-      <fusion-tables-layer query="{
+      <!-- <transit-layer></transit-layer> -->
+      <!-- <fusion-tables-layer query="{
         select: 'Geocodable address',
         from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'}">
-      </fusion-tables-layer>
+      </fusion-tables-layer> -->
       <marker ng-if="coordinates"
       position="{{coordinates.latitude}}, {{coordinates.longitude}}">
       </marker>
