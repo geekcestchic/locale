@@ -1,4 +1,4 @@
-app.factory('CrimeService',['$http', function($http){
+app.factory('CrimeService',['$http', 'LocationService', function($http, LocationService){
   
   var CrimeService = {
 

@@ -31,7 +31,41 @@ app.factory('LocationService',['$http','$q', function($http, $q){
       var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
       var d = Math.round(R * c);
       return d; // returns the distance in meter
-    }
+    },
+
+    getCompetitors: function(type,map,latitude,longitude){
+      var deferred = $q.defer();
+      var currentLocation = new google.maps.LatLng(latitude,longitude);
+      var Competitors = [];
+      var request = {
+          location: currentLocation,
+          rankBy: google.maps.places.RankBy.DISTANCE,
+          types: [type]
+        }; 
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+      function callback(results, status) {
+        for (var i = 0; i < 10; i++) {
+          if (status == google.maps.places.PlacesServiceStatus.OK) {
+            var stationObject = results[i];
+            var formattedCurrentLocation = {
+              latitude: latitude,
+              longitude: longitude
+            };
+            Competitors[i] = { //formatting our own object, so we can then pass it to calculate the distance
+              name: stationObject.name,
+              latitude: stationObject.geometry.location.k,
+              longitude: stationObject.geometry.location.D  
+            };
+            Competitors[i].distance = getDistance(formattedCurrentLocation, Competitors[i]);
+            deferred.resolve(Competitors[i])
+          } else {
+            deferred.reject()
+          }
+        }
+        return deferred.promise;
+      };
+    },
 
   }
 

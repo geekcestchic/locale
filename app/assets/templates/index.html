@@ -56,7 +56,11 @@
       position="{{coordinates.latitude}}, {{coordinates.longitude}}">
       </marker>
     </map>
-    <competitors ng-show="Tab.isSet(1)"></competitors>
+    <competitors ng-show="Tab.isSet(1)">
+      <ul>
+        <li></li>
+      </ul>
+    </competitors>
     <crimes ng-show="Tab.isSet(2)"></crimes>
     <stations ng-show="Tab.isSet(3)"></stations>
     <property-prices ng-show="Tab.isSet(4)"></property-prices>

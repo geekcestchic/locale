@@ -31,5 +31,35 @@ stations{
 }
 
 crimes{
+  display:inline-block;
+  // .histogram{
+  //   height:0;
+  //   width:50px;
+  //   display:inline-block;
+  //   text-align:center;
+  //   color:white;
+  // }
+  // .radius-one{
+  //   background-color:#7dcdcd;
+  // }
+  // .radius-two{
+  //   background-color:#c0e8e8;
+  // }
+  // .radius-three{
+  //   background-color:#e0efef;
+  // }
+  .bar rect{
+    fill: red;
+    shape-rendering:crispEdges;
+  }
 
+  .bar text {
+    fill: #fff;
+  }
+
+  .axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
 }

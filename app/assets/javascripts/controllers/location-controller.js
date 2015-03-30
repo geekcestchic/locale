@@ -21,8 +21,16 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
         $scope.map = map
         //getting the closest station from Google places
         StationService.getClosestStation($scope.map, data.latitude, data.longitude)
+        //getting the closest competitors
+        LocationService.getCompetitors('cafe',$scope.map, data.latitude, data.longitude)
+        .then(function(data){
+          $scope.competitors = data;
+          console.log($scope.competitors)
+        })
       });    
     })
+
+
   };
   //snazzy maps
   $scope.mapStyle = mapStyle;

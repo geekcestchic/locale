@@ -56,7 +56,7 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
      var xAxis = d3.svg.axis()
                .scale(rScale)
                .orient("bottom")
-               .ticks(5);
+               .ticks(4);
 
      //Create SVG element
      var svg = d3.select("stations")
@@ -93,6 +93,7 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
           return h/2 - i*30 - 7
         })
         .style("stroke","black")
+        .style("stroke-dasharray","5,10")
 
       svg.selectAll('station')
         .data(dataset)
