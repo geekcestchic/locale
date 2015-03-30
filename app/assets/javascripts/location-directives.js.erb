@@ -1,24 +1,21 @@
 app.directive('crimes',function(){
   return{
     restrict:'E',
-    templateUrl: 'assets/crime-graph.html',
-    transclude:true,
-    controller:function(){
-    }
+    templateUrl: "<%= asset_path('crime-graph.html') %>"
   }
 })
 
 app.directive('stations',function(){
   return{
     restrict:'E',
-    templateUrl: 'assets/closest-stations.html'
+    templateUrl: "<%= asset_path('closest-stations.html') %>"
   }
 })
 
 app.directive('propertyPrices',function(){
   return{
     restrict:'E',
-    templateUrl: 'assets/property-prices.html'
+    templateUrl: "<%= asset_path('property-prices.html') %>"
   }
 })
 
