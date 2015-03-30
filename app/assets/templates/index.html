@@ -1,20 +1,27 @@
+<div class="bigdiv welcome"><h1>Welcome to Locale, your commercial analysis tool</h1></div>
+<div class="bigdiv intro">
+  <h2>The way we work is pretty simple.<br>Input an address and we return some stats. You can also compare two addresses.<br>GET STARTED?</h2>
+</div>
 <div class="site-container" ng-controller="LocationController as Location">
   
   <!-- WELCOME DIV -->
-  <div class="welcome">
-    <h1>LOCALE</h1>
-    
+  <div class="bigdiv search">    
     <!-- INPUT FORM -->
-    <form name="locationForm" ng-submit="returnStats(newLocation)">
-      <label><p>Please Enter a valid London Address</p></label>
-      <label><p><i>(e.g. 413 Oxford Street, W1C2PF)</i></p></label>
-      <input type="text" ng-model="newLocation">
-      <button>SUBMIT</button>
-    </form>
+    <div class="circle-three circle">
+      <div class="circle-two circle">
+        <div class="circle-one circle">
+          <form name="locationForm" ng-submit="returnStats(newLocation)">
+            <label><h3>Please Enter a valid London Address<br><i>(e.g. 413 Oxford Street, W1C2PF)</i></h3></label>
+            <input type="text" ng-model="newLocation">
+            <button>SUBMIT</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- RESULTS -->
-  <div class="results" ng-if="coordinates" ng-controller="TabController as Tab">
+  <div class="results bigdiv" ng-if="coordinates" ng-controller="TabController as Tab">
     
     <!-- TAB LINKS -->
     <ul class="nav nav-pills">

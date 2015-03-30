@@ -15,19 +15,22 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
     },
 
     graphPropertyPrices: function(data){
+      
       var dataset = data.areas
-      // var dataset = _.reject(dataset,function(area){
-      //   return area.average_sold_price_1year === 0;
+      dataset = dataset.filter(function(area){
+        return area.average_sold_price_1year !== "0"
+      })
+
+      //  dataset = _.reject(dataset,function(area){
+      //   return area.average_sold_price_1year == "0";
       // })      
       console.log(dataset)
 
       var margin = {top: 10, right: 50, bottom: 30, left: 50},
-      width = 700 - margin.left - margin.right,
+      width = 850 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
       var barPadding = 10;
       
-      console.log(dataset[0].average_sold_price_1year-dataset[0].average_sold_price_7year)
-
       function urlToStreetName(url){
         urlArray = url.split('/')
         return urlArray[urlArray.length-1].replace('-',' ')
@@ -43,7 +46,7 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
                     return d.average_sold_price_1year; 
                   }),
                   d3.min(dataset,function(d){
-                    return d.average_sold_price_7year
+                    return 0;
                   })
                   ])
                  .range([margin.bottom, height-margin.top]);
@@ -141,8 +144,12 @@ app.factory('NearbyService',['$http','$resource', function($http,$resource){
           var increase = (d.average_sold_price_1year-d.average_sold_price_7year)/d.average_sold_price_7year
           increase = increase * 100
           increase = Math.round(increase)
-          return '+'+increase+'%'
+          if (increase >0){return '+'+increase+'%'}
+          else {return increase+'%'}
          })
+         // .attr('class', function(increase){
+         //  if (increase < 0){return 'negative'}
+         // })
          .attr("x", function(d, i) {
             return i * (width / dataset.length) + (width / dataset.length - barPadding) / 2;
          })
