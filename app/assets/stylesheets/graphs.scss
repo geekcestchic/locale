@@ -49,12 +49,17 @@ crimes{
   //   background-color:#e0efef;
   // }
   .bar rect{
-    fill: red;
-    shape-rendering:crispEdges;
+    fill: none;
+    stroke:black;
+    stroke-dasharray:3,3;
+  }
+  .bar rect:hover{
+    stroke-dasharray:none;
+    fill:rgb(226,187,60);
   }
 
   .bar text {
-    fill: #fff;
+    fill: black;
   }
 
   .axis path, .axis line {

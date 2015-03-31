@@ -22,6 +22,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
         $scope.map = map
         //getting the closest station from Google places
         StationService.getClosestStation($scope.map, data.latitude, data.longitude)
+        
         // getting the closest competitors // fix this later
         // LocationService.getCompetitors('cafe',$scope.map, data.latitude, data.longitude)
         // .success(function(data){
@@ -31,6 +32,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
         // .fail(function(status){
         //   console.log(status)
         // })
+      
       });    
     })
 
