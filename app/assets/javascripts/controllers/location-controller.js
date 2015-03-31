@@ -8,8 +8,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
       $scope.coordinates = data;
       LocationService.reverseGeocode(data)
       .then(function(data){
-        $scope.location=data;
-        console.log($scope.location)
+        $scope.location=data; //we assign this variable that we will use in our html
       });
       return CrimeService.getCrimes(data.latitude, data.longitude)  // Getting Data from Crimes API
     })

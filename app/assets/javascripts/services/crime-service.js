@@ -1,4 +1,4 @@
-app.factory('CrimeService',['$http', 'LocationService', function($http, LocationService){
+app.factory('CrimeService',['$http','LocationService', function($http, LocationService){
   
   var CrimeService = {
 
@@ -18,6 +18,7 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
         crimesArray.push(crimeData)
       });
       crimesArray = _.reject(crimesArray, function(i){return i.distance>200})
+      //calling the next functions
       CrimeService.drawCrimeHistogram(crimesArray)
       CrimeService.drawCrimePie(crimesArray)
     },
@@ -32,15 +33,16 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
       });
       
       var w = $(window).width()/2,                        //width
-          h = $(window).height()/2,                            //height
-          r = 100,                            //radius
-          color = d3.scale.category20c(),     //builtin range of colors
+          h = $(window).height()/2,  
           margin = {
             top:50,
             right:50,
             bottom:50,
-            left:50
-          };
+            left:100
+          },                          //height
+          r = h/3,                          //radius
+          color = d3.scale.category20c();   //builtin range of colors
+          
 
       var vis = d3.select("crimes")
                 .append("svg:svg")              //create the SVG element inside the <body>
@@ -73,8 +75,8 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
         arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
-                d.innerRadius = r*3/4;
-                d.outerRadius = r;
+                d.innerRadius = r;
+                d.outerRadius = r * 2;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
                 })
                 .attr("text-anchor", "middle")                          //center the text on it's origin
@@ -145,7 +147,11 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
           .attr("y", 6)
           .attr("x", x(data[0].dx) / 2)
           .attr("text-anchor", "middle")
-          .text(function(d) { return formatCount(d.y); });
+          .text(function(d) { 
+            if (d.y > 0){
+              return formatCount(d.y);
+            } 
+          });
 
       svg.append("g")
           .attr("class", "x axis")
@@ -157,7 +163,7 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
           .attr("x", width/2-margin.right)
           .text(function(d){
             var numberOfCrimes = values.length;
-            return 'Location Name - '+ numberOfCrimes + ' crimes committed'
+            return numberOfCrimes + ' crimes committed'
           })
           .style("font-size",20)
 

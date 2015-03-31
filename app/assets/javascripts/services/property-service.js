@@ -7,23 +7,43 @@ app.factory('PropertyService',['$http', function($http){
       $http.post('static/get_property_prices', {data:{area:formattedAddress}})
       .success(function(data, status) {
         //let us format the data first
-        PropertyService.graphPropertyPrices(data)
+        var dataset = data.areas
+        dataset = dataset.filter(function(area){
+          return area.average_sold_price_1year !== "0"
+        })
+        PropertyService.appendPropertyData(dataset)
+        PropertyService.graphPropertyPrices(dataset) 
       })
       .error(function(data, status) {
         console.log(data) || "Request failed";
       });
     },
 
-    graphPropertyPrices: function(data){
-      
-      var dataset = data.areas
-      dataset = dataset.filter(function(area){
-        return area.average_sold_price_1year !== "0"
-      })
+    appendPropertyData: function(dataset){
+      //calculate the average increase in property value average over 7 years
+      var sum = _.reduce(dataset, function(memo, property){ 
+        var increase = (property.average_sold_price_1year-property.average_sold_price_7year)/property.average_sold_price_7year
+        return memo + increase; 
+      }, 0);
+      var averageIncreasePrice = Math.round(sum/dataset.length * 100)
+      //formatting the value and displaying it right
+      if (averageIncreasePrice >10){
+        $('.price-increase').css('background-color','green');
+        averageIncreasePrice = '+'+averageIncreasePrice+'%';
+      }
+      else {
+        $('.price-increase').css('background-color','red');
+        averageIncreasePrice = averageIncreasePrice+'%';
+      }
+      //creating the div and assiging its color
+      $('property-prices').append('<div class="price-increase"><p>Average Property Price increase over 7 years:'+ averageIncreasePrice +'</p></div>')
+    },
 
-      var margin = {top: 10, right: 300, bottom: 30, left: 60},
+    graphPropertyPrices: function(dataset){
+
+      var margin = {top: 10, right: 60, bottom: 30, left: 60},
       width = $(window).width() - margin.left - margin.right,
-      height = $(window).height()/2 - margin.top - margin.bottom;
+      height = $(window).height()*0.4 - margin.top - margin.bottom;
       var barPadding = 10;
       
       function urlToStreetName(url){
@@ -33,7 +53,7 @@ app.factory('PropertyService',['$http', function($http){
 
       var xScale = d3.scale.linear()
                  .domain([0, d3.max(dataset, function(d) { return d.length; })])
-                 .range([0, width]);
+                 .range([margin.left, width-margin.right]);
 
       var yScale = d3.scale.linear()
                  .domain([
