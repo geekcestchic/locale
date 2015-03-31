@@ -63,11 +63,11 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
        .append("svg")
        .attr("width", w)
        .attr("height", h)
-       .attr("class","stations")
+       .attr("class","station")
        .append("g")
 
-     //Create lines
-     circle = svg.selectAll("circle")
+     //Create circles
+     svg.selectAll("circle")
          .data(dataset)
          .enter()
          .append("circle")

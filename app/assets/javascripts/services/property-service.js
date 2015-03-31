@@ -27,16 +27,14 @@ app.factory('PropertyService',['$http', function($http){
       }, 0);
       var averageIncreasePrice = Math.round(sum/dataset.length * 100)
       //formatting the value and displaying it right
-      if (averageIncreasePrice >10){
-        $('.price-increase').css('background-color','green');
-        averageIncreasePrice = '+'+averageIncreasePrice+'%';
+      if (averageIncreasePrice >0){
+        $('property-prices').append('<div class="price-increase"><p>Average Property Price increase over 7 years: +'+ averageIncreasePrice +'%</p></div>')
+        $('.price-increase').css('background-color','mediumaquamarine');
       }
       else {
+        $('property-prices').append('<div class="price-increase"><p>Average Property Price change over 7 years: '+ averageIncreasePrice +'%</p></div>')
         $('.price-increase').css('background-color','red');
-        averageIncreasePrice = averageIncreasePrice+'%';
-      }
-      //creating the div and assiging its color
-      $('property-prices').append('<div class="price-increase"><p>Average Property Price increase over 7 years:'+ averageIncreasePrice +'</p></div>')
+      }      
     },
 
     graphPropertyPrices: function(dataset){

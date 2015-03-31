@@ -1,71 +1,67 @@
-<div class="bigdiv welcome" ng-click="scrollTop(1)"><h1>Welcome to <i><u>Locale</u></i>, your location analysis tool</h1></div>
-<div class="bigdiv intro" ng-click="scrollTop(2)">
-  <h2>It's all pretty simple.<br>Input an address and we return some stats. You can also compare two addresses.<br><i>GET STARTED?</i></h2>
-</div>
-<div class="site-container">
-  
-  <!-- WELCOME DIV -->
-  <div class="bigdiv search">    
-    <!-- INPUT FORM -->
+<div ng-controller="LocationController as location"> 
+  <div class="bigdiv welcome" ng-click="scrollTop(1)"><h1>Welcome to <i><u>Locale</u></i>, your location analysis tool</h1></div>
+  <div class="bigdiv intro" ng-click="scrollTop(2)">
+    <h2>It's all pretty simple.<br>Input an address and we return some stats. You can also compare two addresses.<br><i>GET STARTED?</i></h2>
+  </div>
+  <div class="site-container">
     
-    <div class="circle-three circle">
-        <div class="circle-two circle">
-          <div class="circle-one circle">
-            <div class="line"></div>
-            <form name="locationForm" ng-submit="returnStats(newLocation)">
-              <label><h3>Enter a valid London address<br><i>(e.g. 413 Oxford Street, W1C 2PF)</i></h3></label>
-              <input type="text" ng-model="newLocation">
-              <button ng-click="scrollTop(4)">lookup</button>
-            </form>
+    <!-- WELCOME DIV -->
+    <div class="bigdiv search">    
+      <!-- INPUT FORM -->
+      
+      <div class="circle-three circle">
+          <div class="circle-two circle">
+            <div class="circle-one circle">
+              <div class="line"></div>
+              <form name="locationForm" ng-submit="returnStats(newLocation)">
+                <label><h3>Enter a valid London address<br><i>(e.g. 413 Oxford Street, W1C 2PF)</i></h3></label>
+                <input type="text" ng-model="newLocation">
+                <button ng-click="scrollTop(4)">lookup</button>
+              </form>
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- RESULTS -->
-  <div class="results bigdiv" ng-if="coordinates" ng-controller="TabController as Tab">
-    
-    <!-- TAB LINKS -->
-    <ul class="nav nav-pills">
-      <li ng-class="{ active:Tab.isSet(1) }">
-       <a href ng-click="Tab.setTab(1)">Map</a>
-      </li>
-      <li ng-class="{ active:Tab.isSet(2) }">
-       <a href ng-click="Tab.setTab(2)">Crimes</a>
-      </li>
-      <li ng-class="{ active:Tab.isSet(3) }">
-        <a href ng-click="Tab.setTab(3)">Closest Stations</a>
-      </li>
-      <li ng-class="{ active:Tab.isSet(4) }">
-        <a href ng-click="Tab.setTab(4)">Property Prices</a>
-      </li>
-    </ul>
-
-    <!-- CONTENT PER TAB -->
-    <map ng-show="Tab.isSet(1)" 
-    zoom="14" 
-    center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
-    styles="{{mapStyle}}" 
-    disableDefaultUI="true">
-      <!-- <transit-layer></transit-layer> -->
-      <!-- <fusion-tables-layer query="{
-        select: 'Geocodable address',
-        from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'}">
-      </fusion-tables-layer> -->
-      <marker ng-if="coordinates"
-      position="{{coordinates.latitude}}, {{coordinates.longitude}}">
-      </marker>
-    </map>
-    <competitors ng-show="Tab.isSet(1)">
-      <ul>
-        <li></li>
+    <!-- RESULTS -->
+    <div class="results bigdiv" ng-if="coordinates" ng-controller="TabController as Tab">
+      
+      <!-- TAB LINKS -->
+      <ul class="nav nav-pills">
+        <li ng-class="{ active:Tab.isSet(1) }">
+         <a href ng-click="Tab.setTab(1)">Map</a>
+        </li>
+        <li ng-class="{ active:Tab.isSet(2) }">
+         <a href ng-click="Tab.setTab(2)">Crimes</a>
+        </li>
+        <li ng-class="{ active:Tab.isSet(3) }">
+          <a href ng-click="Tab.setTab(3)">Closest Stations</a>
+        </li>
+        <li ng-class="{ active:Tab.isSet(4) }">
+          <a href ng-click="Tab.setTab(4)">Property Prices</a>
+        </li>
       </ul>
-    </competitors>
-    <crimes ng-show="Tab.isSet(2)"></crimes>
-    <stations ng-show="Tab.isSet(3)"></stations>
-    <property-prices ng-show="Tab.isSet(4)"></property-prices>
 
+      <!-- CONTENT PER TAB -->
+      <map ng-show="Tab.isSet(1)" 
+      zoom="14" 
+      center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
+      styles="{{mapStyle}}" 
+      disableDefaultUI="true">
+        <marker ng-if="coordinates"
+        position="{{coordinates.latitude}}, {{coordinates.longitude}}">
+        </marker>
+        <marker ng-if="coordinates" ng-each="competitor in competitors"
+        position="{{competitor.latitude}}, {{competitor.longitude}}"></marker> <!-- doesnt work -->
+      </map>
+      <competitors ng-show="Tab.isSet(1)">
+      </competitors>
+      <crimes ng-show="Tab.isSet(2)"></crimes>
+      <stations ng-show="Tab.isSet(3)"></stations>
+      <property-prices ng-show="Tab.isSet(4)"></property-prices>
+
+    </div>
+    
   </div>
-  
 </div>
 

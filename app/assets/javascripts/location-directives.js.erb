@@ -22,7 +22,8 @@ app.directive('propertyPrices',function(){
 app.directive('competitors',function(){
   return{
     restrict:'E',
-    templateUrl: "<%= asset_path('competitors.html') %>"
+    templateUrl: "<%= asset_path('competitors.html') %>",
+    controller:'LocationController'
   }
 })
 

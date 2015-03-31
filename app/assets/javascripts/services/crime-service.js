@@ -4,8 +4,6 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
 
     getCrimes: function(latitude,longitude){
       return $http.get('https://data.police.uk/api/crimes-street/all-crime?lat='+latitude+'&lng='+longitude);
-      $scope.newLocation = false;
-      Location.locationForm.$setPristine();
     },
 
     countCrimes: function(currentLocation,crimes){
@@ -26,11 +24,13 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
     drawCrimePie:function(values){
       //formatting data
       var dataset = values;
-      var sortedCrimes = _.groupBy(values,function(crime){return crime.category})
+      console.log('original dataset',dataset)
+      var sortedCrimes = _.groupBy(dataset,function(crime){return crime.category})
       var countCrimes = []
-      _.each(sortedCrimes,function(key,value){
-        countCrimes.push({label:key[0].category,value:value.length})
+      _.each(sortedCrimes,function(crime){
+        countCrimes.push({label:crime[0].category,value:crime.length})
       });
+      console.log(countCrimes)
       
       var w = $(window).width()/2,                        //width
           h = $(window).height()/2,  
@@ -83,7 +83,8 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
                 .style("font-size", "12px")
                 .style("font-weight","bold")                       //center the text on it's origin
                 .text(function(d, i) { 
-                  percentage = Math.round(countCrimes[i].value/values.length * 100)
+                  var percentage = Math.round(countCrimes[i].value/values.length * 100);
+                  // console.log(countCrimes[i].value,values.length)
                   return countCrimes[i].label + ' - '+ percentage + '%'; 
                 });        //get the label from our original data array
 

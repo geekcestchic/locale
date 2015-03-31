@@ -20,15 +20,18 @@
   background-attachment:fixed;
   h1{
     color:mediumaquamarine;
+    text-shadow: 2px 2px 0px rgba(255,255,255,1);
     margin: 20% 5%;
     font-size:60px;
     cursor:pointer;
-    // font-family: 'Oswald', sans-serif;
   }
 }
 .intro{
   top:100%;
   background:mediumaquamarine;
+  h2{
+    font-family: 'Oswald', sans-serif;
+  }
 }
 .search{
   top:200%;
@@ -95,15 +98,16 @@
     button{
       border:none;
       background:red;
-      padding:0 5px;
+      padding:2px 7px;
       color:white;
       font-size:20px;
       cursor:pointer;
+      border-radius:3px;
     }
   }
   h3{
     color:black;
-    margin-top:20%;
+    margin-top:15%;
   }
   background-image:url('london.jpg');
   background-size:cover;

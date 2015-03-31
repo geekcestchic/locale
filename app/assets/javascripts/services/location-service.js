@@ -55,15 +55,18 @@ app.factory('LocationService',['$http','$q', function($http, $q){
 
     getCompetitors: function(type,map,latitude,longitude){
       var deferred = $q.defer();
+
       var currentLocation = new google.maps.LatLng(latitude,longitude);
-      var Competitors = [];
+      var competitors = [];
       var request = {
           location: currentLocation,
           rankBy: google.maps.places.RankBy.DISTANCE,
           types: [type]
         }; 
       service = new google.maps.places.PlacesService(map);
-      deferred.resolve(service.nearbySearch(request, callback));
+
+      service.nearbySearch(request, callback);
+
       function callback(results, status) {
         for (var i = 0; i < 10; i++) {
           if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -72,22 +75,22 @@ app.factory('LocationService',['$http','$q', function($http, $q){
               latitude: latitude,
               longitude: longitude
             };
-            Competitors[i] = { //formatting our own object, so we can then pass it to calculate the distance
+            competitors[i] = { //formatting our own object, so we can then pass it to calculate the distance
               name: stationObject.name,
               latitude: stationObject.geometry.location.k,
               longitude: stationObject.geometry.location.D  
             };
-            Competitors[i].distance = getDistance(formattedCurrentLocation, Competitors[i]);
+            competitors[i].distance = getDistance(formattedCurrentLocation, competitors[i]);
           } else {
             deferred.reject(status);
             alert("Could not retrieve competitors for the following reason: " + status);
           }
-          return Competitors
-        }
-        return deferred.promise;
-      };
-    },
-
+        } // end for loop
+        deferred.resolve(competitors);
+        // return competitors;
+      } // end of callback func
+      return deferred.promise;
+    } // end getCompetitors
   }
 
   return LocationService
