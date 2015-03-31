@@ -28,12 +28,10 @@ app.factory('PropertyService',['$http', function($http){
       var averageIncreasePrice = Math.round(sum/dataset.length * 100)
       //formatting the value and displaying it right
       if (averageIncreasePrice >0){
-        $('property-prices').append('<div class="price-increase"><p>Average Property Price increase over 7 years: +'+ averageIncreasePrice +'%</p></div>')
-        $('.price-increase').css('background-color','mediumaquamarine');
+        $('property-prices').append('<div class="positive"><p>Average Property Price increase over 7 years: +'+ averageIncreasePrice +'%</p></div>')
       }
       else {
-        $('property-prices').append('<div class="price-increase"><p>Average Property Price change over 7 years: '+ averageIncreasePrice +'%</p></div>')
-        $('.price-increase').css('background-color','red');
+        $('property-prices').append('<div class="negative"><p>Average Property Price change over 7 years: '+ averageIncreasePrice +'%</p></div>')
       }      
     },
 

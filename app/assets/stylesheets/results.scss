@@ -61,8 +61,14 @@
     }
   }
   property-prices{
-    .price-increase{
+    .positive{
+      background:mediumaquamarine;
       padding:20px;
+    }
+    .negative{
+      background:red;
+      padding:20px;
+      color:black;
     }
   }
   stations{
