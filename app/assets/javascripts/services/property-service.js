@@ -21,8 +21,6 @@ app.factory('PropertyService',['$http', function($http){
         return area.average_sold_price_1year !== "0"
       })
 
-      console.log(data)      
-
       var margin = {top: 10, right: 300, bottom: 30, left: 60},
       width = $(window).width() - margin.left - margin.right,
       height = $(window).height()/2 - margin.top - margin.bottom;

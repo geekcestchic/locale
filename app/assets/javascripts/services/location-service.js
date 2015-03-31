@@ -19,6 +19,26 @@ app.factory('LocationService',['$http','$q', function($http, $q){
       });
       return deferred.promise; 
     },
+
+    reverseGeocode: function(coordinates){
+      var deferred = $q.defer();
+      var geocoder = new google.maps.Geocoder();
+      var latlng = new google.maps.LatLng(coordinates.latitude, coordinates.longitude);
+      geocoder.geocode({'latLng': latlng}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          if (results[1]) {
+            var location = results[1].formatted_address;
+            deferred.resolve(location)
+          } else {
+            alert('No location found');
+          }
+        } else {
+          deferred.reject();
+          alert('Geocoder failed due to: ' + status);
+        }   
+      });
+      return deferred.promise;
+    },
     
     getDistance: function(p1, p2) {
       var rad = function(x) {return x * Math.PI / 180;};

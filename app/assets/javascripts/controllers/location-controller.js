@@ -6,6 +6,11 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
     LocationService.codeAddress(address)  // Geocoding the address, see Location Service
     .then(function(data) {
       $scope.coordinates = data;
+      LocationService.reverseGeocode(data)
+      .then(function(data){
+        $scope.location=data;
+        console.log($scope.location)
+      });
       return CrimeService.getCrimes(data.latitude, data.longitude)  // Getting Data from Crimes API
     })
     .then(function(crimesObject) {
@@ -32,7 +37,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
         // .fail(function(status){
         //   console.log(status)
         // })
-      
+
       });    
     })
 

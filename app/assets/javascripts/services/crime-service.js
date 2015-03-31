@@ -66,7 +66,7 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
                 .attr("fill","none")
                 .attr("stroke","black")
                 .attr("stroke-dash","black")
-                .attr("stroke-dasharray","3,3")
+                // .attr("stroke-dasharray","3,3")
                 // .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
                 .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
 
@@ -78,21 +78,13 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
                 })
                 .attr("text-anchor", "middle")                          //center the text on it's origin
-                .style("font-size", "12px")                          //center the text on it's origin
+                .style("font-size", "12px")
+                .style("font-weight","bold")                       //center the text on it's origin
                 .text(function(d, i) { 
                   percentage = Math.round(countCrimes[i].value/values.length * 100)
                   return countCrimes[i].label + ' - '+ percentage + '%'; 
                 });        //get the label from our original data array
 
-        vis.append("text")
-            .attr("y", margin.top)
-            .attr("x", w-margin.right)
-            .text(function(){
-              var numberOfCrimes = values.length;
-              return 'Total crimes committed '+numberOfCrimes
-            })
-            .style("font-size", 20) 
-            .style("color","black")
     },
 
     drawCrimeHistogram: function(values){

@@ -51,10 +51,10 @@ crimes{
   .bar rect{
     fill: none;
     stroke:black;
-    stroke-dasharray:3,3;
+    // stroke-dasharray:3,3;
   }
   .bar rect:hover{
-    stroke-dasharray:none;
+    // stroke-dasharray:none;
     fill:rgb(226,187,60);
   }
 
