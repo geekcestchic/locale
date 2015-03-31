@@ -10,6 +10,7 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
 
     countCrimes: function(currentLocation,crimes){
       var crimeDistances = [];
+      console.log(crimes)
       $.each(crimes, function(index,crime){
         var distance = LocationService.getDistance(currentLocation,crime.location)
         crimeDistances.push(distance)

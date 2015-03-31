@@ -1,6 +1,7 @@
 app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','$q','LocationService','CrimeService','PropertyService','StationService' ,function($scope, $rootScope, $timeout, $http, $q, LocationService, CrimeService, PropertyService,StationService){
 
   $scope.returnStats =  function(address){
+    
     //geocoding the address to use the crimes api
     LocationService.codeAddress(address)  // Geocoding the address, see Location Service
     .then(function(data) {
@@ -21,12 +22,15 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
         $scope.map = map
         //getting the closest station from Google places
         StationService.getClosestStation($scope.map, data.latitude, data.longitude)
-        //getting the closest competitors
-        LocationService.getCompetitors('cafe',$scope.map, data.latitude, data.longitude)
-        .then(function(data){
-          $scope.competitors = data;
-          console.log($scope.competitors)
-        })
+        // getting the closest competitors // fix this later
+        // LocationService.getCompetitors('cafe',$scope.map, data.latitude, data.longitude)
+        // .success(function(data){
+        //   $scope.competitors = data;
+        //   console.log($scope.competitors)
+        // })
+        // .fail(function(status){
+        //   console.log(status)
+        // })
       });    
     })
 

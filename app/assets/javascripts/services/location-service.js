@@ -43,7 +43,7 @@ app.factory('LocationService',['$http','$q', function($http, $q){
           types: [type]
         }; 
       service = new google.maps.places.PlacesService(map);
-      service.nearbySearch(request, callback);
+      deferred.resolve(service.nearbySearch(request, callback));
       function callback(results, status) {
         for (var i = 0; i < 10; i++) {
           if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -58,10 +58,11 @@ app.factory('LocationService',['$http','$q', function($http, $q){
               longitude: stationObject.geometry.location.D  
             };
             Competitors[i].distance = getDistance(formattedCurrentLocation, Competitors[i]);
-            deferred.resolve(Competitors[i])
           } else {
-            deferred.reject()
+            deferred.reject(status);
+            alert("Could not retrieve competitors for the following reason: " + status);
           }
+          return Competitors
         }
         return deferred.promise;
       };
