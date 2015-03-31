@@ -31,10 +31,16 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
         countCrimes.push({label:key[0].category,value:value.length})
       });
       
-      var w = 300,                        //width
-          h = 300,                            //height
+      var w = $(window).width()/2,                        //width
+          h = $(window).height()/2,                            //height
           r = 100,                            //radius
-          color = d3.scale.category20c();     //builtin range of colors
+          color = d3.scale.category20c(),     //builtin range of colors
+          margin = {
+            top:50,
+            right:30,
+            bottom:30,
+            left:50
+          };
 
       var vis = d3.select("crimes")
                 .append("svg:svg")              //create the SVG element inside the <body>
@@ -42,7 +48,7 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
                 .attr("width", w)           //set the width and height of our visualization (these will be attributes of the <svg> tag
                 .attr("height", h)
                 .append("svg:g")                //make a group to hold our pie chart
-                .attr("transform", "translate(" + r + "," + r + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+                .attr("transform", "translate(" + r  + "," + r  + ")")    //move the center of the pie chart from 0, 0 to radius, radius
 
       var arc = d3.svg.arc()              //this will create <path> elements for us using arc data
                 .outerRadius(r);
@@ -70,6 +76,14 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
                 .attr("text-anchor", "middle")                          //center the text on it's origin
                 .style("font-size", "8px")                          //center the text on it's origin
                 .text(function(d, i) { return countCrimes[i].label; });        //get the label from our original data array
+
+        vis.append("text")
+            .attr("y", margin.top)
+            .attr("x", w-margin.right)
+            .text(function(){
+              var numberOfCrimes = values.length;
+              return 'Total crimes committed '+numberOfCrimes
+            })
     },
 
     drawCrimeHistogram: function(values){
@@ -82,8 +96,8 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
 
-      var margin = {top: 50, right: 300, bottom: 30, left: 30},
-          width = $(window).width() - margin.left - margin.right,
+      var margin = {top: 50, right: 50, bottom: 30, left: 30},
+          width = $(window).width()/2 - margin.left - margin.right,
           height = $(window).height()/2 - margin.top - margin.bottom;
 
       var x = d3.scale.linear()  //defining the xscale
@@ -137,14 +151,6 @@ app.factory('CrimeService',['$http', 'LocationService', function($http, Location
           .attr("x", width/2)
           .text(function(d){
             return 'Location Name Will Appear Here'
-          })
-
-      svg.append("text")
-          .attr("y", height/2)
-          .attr("x", width+100)
-          .text(function(){
-            var numberOfCrimes = crimeDistances.length;
-            return 'Total crimes committed '+numberOfCrimes
           })
 
     }
