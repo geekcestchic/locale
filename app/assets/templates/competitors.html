@@ -7,13 +7,14 @@
   </ul>
 </div>
 <map 
-zoom="14" 
+zoom="17" 
 center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
 styles="{{mapStyle}}" 
 disableDefaultUI="true">
-  <marker
-  position="{{coordinates.latitude}}, {{coordinates.longitude}}">
+  <marker position="{{coordinates.latitude}}, {{coordinates.longitude}}" icon="https://s3-eu-west-1.amazonaws.com/locale-app/location-icon.png">
   </marker>
-  <marker ng-repeat="competitor in competitors"
-  position="{{competitor.latitude}}, {{competitor.longitude}}"></marker> <!-- doesnt work -->
+  <marker 
+  ng-repeat="competitor in competitors"
+  position="{{competitor.latitude}}, {{competitor.longitude}}"
+  icon="https://s3-eu-west-1.amazonaws.com/locale-app/cross.png"></marker> 
 </map>

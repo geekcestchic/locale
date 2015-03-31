@@ -20,7 +20,7 @@
   background-attachment:fixed;
   h1{
     color:mediumaquamarine;
-    text-shadow: 2px 2px 0px rgba(255,255,255,1);
+    text-shadow: 2px 2px 0px white;
     margin: 20% 5%;
     font-size:60px;
     cursor:pointer;
@@ -31,6 +31,7 @@
   background:mediumaquamarine;
   h2{
     font-family: 'Oswald', sans-serif;
+    text-shadow: 3px 3px 0px lightgrey;
   }
 }
 .search{

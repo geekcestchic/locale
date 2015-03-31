@@ -46,19 +46,19 @@
       width:50%;
       height:77%;
       float:right;
-      // z-index:0;
-      // margin-left: 50%;
-      // margin-top: 100px;
     } 
     .left{
       width:50%;
       height:77%;
       float:left;
-      // position:absolute;
-      // top:0%;
-      // left:0%;
       // z-index:0;
-    }  
+    }
+    li{
+      padding:10px 30px;
+    } 
+    li:hover{
+      background:rgb(226,187,60);
+    }
   }
   property-prices{
     .price-increase{

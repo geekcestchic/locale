@@ -24,13 +24,11 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
     drawCrimePie:function(values){
       //formatting data
       var dataset = values;
-      console.log('original dataset',dataset)
       var sortedCrimes = _.groupBy(dataset,function(crime){return crime.category})
       var countCrimes = []
       _.each(sortedCrimes,function(crime){
         countCrimes.push({label:crime[0].category,value:crime.length})
       });
-      console.log(countCrimes)
       
       var w = $(window).width()/2,                        //width
           h = $(window).height()/2,  
@@ -84,7 +82,6 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
                 .style("font-weight","bold")                       //center the text on it's origin
                 .text(function(d, i) { 
                   var percentage = Math.round(countCrimes[i].value/values.length * 100);
-                  // console.log(countCrimes[i].value,values.length)
                   return countCrimes[i].label + ' - '+ percentage + '%'; 
                 });        //get the label from our original data array
 

@@ -22,21 +22,20 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
     .then(function(data){
       $scope.coordinatesForStation = data;
       $scope.$on('mapInitialized', function(event, map){
-        console.log('map init')
         $scope.map = map
         //getting the closest station from Google places
         StationService.getClosestStation($scope.map, data.latitude, data.longitude)
-        // getting the closest competitors // fix this later
+        // getting the closest competitors
         LocationService.getCompetitors('cafe',$scope.map, data.latitude, data.longitude)
         .then(function(data){
           $scope.competitors = data;
-          console.log($scope.competitors)
         })
       });    
     })
     $scope.newLocation = '';
     $scope.locationForm.$setPristine();
   };
+
   //snazzy maps
   $scope.mapStyle = mapStyle;
 
@@ -46,7 +45,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   }
 
   $scope.clearResults = function(){
-    
+
   }
 
 }]);
