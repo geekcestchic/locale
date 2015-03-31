@@ -56,8 +56,9 @@ app.factory('PropertyService',['$http', function($http){
       var yScale = d3.scale.linear()
                  .domain([
                   d3.max(dataset, function(d) { 
-                    return d.average_sold_price_1year;
-                  }),0])
+                    return Math.max(d.average_sold_price_1year, d.average_sold_price_7year);
+                  })
+                  ,0])
                  .range([margin.bottom, height-margin.top]);
 
       //Define X axis

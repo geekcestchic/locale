@@ -1,6 +1,19 @@
 <div class="top">
   <h3>*closest competitors rated above 3 stars<br>Location - {{location}}</h3>
 </div>
-<ul>
-  <li ng-each="competitor in competitors">{{competitor.name}} | {{competitor.distance}}m</li>
-</ul>
+<div class="left">
+  <ul>
+    <li ng-repeat="competitor in competitors">{{competitor.name}} | {{competitor.distance}}m</li>
+  </ul>
+</div>
+<map 
+zoom="14" 
+center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
+styles="{{mapStyle}}" 
+disableDefaultUI="true">
+  <marker
+  position="{{coordinates.latitude}}, {{coordinates.longitude}}">
+  </marker>
+  <marker ng-repeat="competitor in competitors"
+  position="{{competitor.latitude}}, {{competitor.longitude}}"></marker> <!-- doesnt work -->
+</map>

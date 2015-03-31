@@ -41,21 +41,10 @@
           <a href ng-click="Tab.setTab(4)">Property Prices</a>
         </li>
       </ul>
-
+      <!-- Loading div -->
+      <loading></loading>
       <!-- CONTENT PER TAB -->
-      <map ng-show="Tab.isSet(1)" 
-      zoom="14" 
-      center="{{coordinates.latitude}}, {{coordinates.longitude}}" 
-      styles="{{mapStyle}}" 
-      disableDefaultUI="true">
-        <marker ng-if="coordinates"
-        position="{{coordinates.latitude}}, {{coordinates.longitude}}">
-        </marker>
-        <marker ng-if="coordinates" ng-each="competitor in competitors"
-        position="{{competitor.latitude}}, {{competitor.longitude}}"></marker> <!-- doesnt work -->
-      </map>
-      <competitors ng-show="Tab.isSet(1)">
-      </competitors>
+      <competitors ng-show="Tab.isSet(1)"></competitors>
       <crimes ng-show="Tab.isSet(2)"></crimes>
       <stations ng-show="Tab.isSet(3)"></stations>
       <property-prices ng-show="Tab.isSet(4)"></property-prices>
