@@ -60,21 +60,21 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
                 .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
                 .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
                 .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
-                .attr("class", "slice");    //allow us to style things in the slices (like text)
+                .attr("class", "slice")    //allow us to style things in the slices (like text)
 
         arcs.append("svg:path")
-                .attr("fill","none")
-                .attr("stroke","black")
-                .attr("stroke-dash","black")
+                // .attr("fill","none")
+                // .attr("stroke","black")
+                // .attr("stroke-dash","black")
                 // .attr("stroke-dasharray","3,3")
-                // .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
                 .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
 
         arcs.append("svg:text")                                     //add a label to each slice
                 .attr("transform", function(d) {                    //set the label's origin to the center of the arc
                 //we have to make sure to set these before calling arc.centroid
                 d.innerRadius = r;
-                d.outerRadius = r * 2;
+                d.outerRadius = 2 * r;
                 return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
                 })
                 .attr("text-anchor", "middle")                          //center the text on it's origin
@@ -84,6 +84,11 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
                   var percentage = Math.round(countCrimes[i].value/values.length * 100);
                   return countCrimes[i].label + ' - '+ percentage + '%'; 
                 });        //get the label from our original data array
+
+        vis.append("text")
+           .attr("y", 0)
+           .attr("x", (w / 2))
+           .text("Types of crime")
 
     },
 
@@ -97,7 +102,7 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
       // A formatter for counts.
       var formatCount = d3.format(",.0f");
 
-      var margin = {top: 50, right: 50, bottom: 30, left: 30},
+      var margin = {top: 50, right: 50, bottom: 50, left: 30},
           width = $(window).width()/2 - margin.left - margin.right,
           height = $(window).height()/2 - margin.top - margin.bottom;
 
@@ -126,7 +131,8 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
 
       var bar = svg.selectAll(".bar")
           .data(data)
-        .enter().append("g")
+          .enter()
+          .append("g")
           .attr("class", "bar")
           .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
 
@@ -134,11 +140,11 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
           .attr("x", 1)
           .attr("width", x(data[0].dx) - 1)
           .attr("height", function(d) { return height - y(d.y); })
-          // .attr("fill", function(d){
-          //   var value = height - y(d.y); 
-          //   var scale = value/height;
-          //   return "rgba(224,0,0,"+ scale +")"
-          // });
+          .attr("fill", function(d){
+            var value = height - y(d.y); 
+            var scale = value/height;
+            return "rgba(224,0,0,"+ scale +")"
+          });
 
       bar.append("text")
           .attr("dy", ".75em")
@@ -164,6 +170,11 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
             return numberOfCrimes + ' crimes committed'
           })
           .style("font-size",20)
+
+      svg.append("text")
+         .attr("y", height+margin.bottom)
+         .attr("x", width / 2 - margin.right)
+         .text("Distance from location / m")
 
     }
 

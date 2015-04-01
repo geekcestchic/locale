@@ -37,7 +37,7 @@ app.factory('PropertyService',['$http', function($http){
 
     graphPropertyPrices: function(dataset){
 
-      var margin = {top: 10, right: 60, bottom: 30, left: 60},
+      var margin = {top: 10, right: 60, bottom: 30, left: 80},
       width = $(window).width() - margin.left - margin.right,
       height = $(window).height()*0.4 - margin.top - margin.bottom;
       var barPadding = 10;

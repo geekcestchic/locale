@@ -41,12 +41,13 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
 
      var dataset = stations
      //Width and height
-     var w = $(window).width();
-     var h = $(window).height()/2;
-     var padding = 30;
-     var margin = {
+     var w = $(window).width(),
+     h = $(window).height()/2,
+     padding = 30,
+     margin = {
       right:300
-     }
+     },
+     color = d3.scale.category20c();
      
      //Create scale functions
      var rScale = d3.scale.linear()
@@ -81,7 +82,7 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
          .attr("cx", w/2-margin.right)
          .attr("cy", h/2)
          .style("fill","none")
-         .style("stroke","black")
+         .style("stroke", function(d, i) { return color(i+5); } )
          .style("stroke-width","1")
          .style("stroke-style","dotted")
 
@@ -122,7 +123,7 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
       //Create X axis
       svg.append("g")
        .attr("class", "axis")
-       .attr("transform", "translate("+(w/2-margin.right)+","+h/2+")")
+       .attr("transform", "translate("+(w/2-margin.right)+","+(h/2-2)+")")
        .call(xAxis)
        .attr("font-size", "15px")
        .style('stroke-width',1)
