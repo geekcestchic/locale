@@ -9,12 +9,12 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
       var request = {
           location: currentLocation,
           rankBy: google.maps.places.RankBy.DISTANCE,
-          types: ['subway_station','train_station']
+          types: ['subway_station']
         }; 
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);
       function callback(results, status) {
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
           if (status == google.maps.places.PlacesServiceStatus.OK) {
             var stationObject = results[i];
             var formattedCurrentLocation = {
@@ -27,6 +27,10 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
               longitude: stationObject.geometry.location.D  
             };
             closestStations[i].distance = getDistance(formattedCurrentLocation, closestStations[i]);
+            if (i > 0 && closestStations[i].distance - closestStations[i-1].distance < 20){
+              console.log('stations too close!')
+              // closestStations.splice(i,1)
+            }
           };
         };
         StationService.showClosestStations(closestStations);
@@ -47,10 +51,10 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
      //Create scale functions
      var rScale = d3.scale.linear()
                 .domain([
-                  d3.min(dataset,function(d){ return d.distance; }), 
+                  0, 
                   d3.max(dataset, function(d) { return d.distance; })
                   ])
-                .range([30, (w - padding * 2)/8]);
+                .range([0, (w - padding * 2)/8]);
 
      //Define X axis
      var xAxis = d3.svg.axis()
@@ -113,20 +117,22 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
         })
         .attr('font-size',20)
 
-     svg.append('circle')
-        .attr('r',10)
-        .attr('class','yourlocation')
-        .attr("cx", w/2-margin.right)
-        .attr("cy", h/2)
-        .style("fill","red")
+     
 
-     //Create X axis
-     svg.append("g")
+      //Create X axis
+      svg.append("g")
        .attr("class", "axis")
        .attr("transform", "translate("+(w/2-margin.right)+","+h/2+")")
        .call(xAxis)
        .attr("font-size", "15px")
        .style('stroke-width',1)
+      //Your location
+      svg.append('circle')
+         .attr('r',10)
+         .attr('class','yourlocation')
+         .attr("cx", w/2-margin.right)
+         .attr("cy", h/2)
+         .style("fill","red")
     }
 
   };

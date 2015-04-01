@@ -10,10 +10,16 @@ property-prices{
     fill: white;
   }
 
-  .axis path, .axis line {
-    fill: none;
-    stroke: white;
-    shape-rendering: crispEdges;
+  .axis path,
+  .axis line {
+      fill: none;
+      stroke: black;
+      shape-rendering: crispEdges;
+  }
+
+  .axis text {
+      font-family: sans-serif;
+      font-size: 11px;
   }
   .negative{
     stroke: red;
@@ -25,8 +31,12 @@ property-prices{
 stations{
   .axis line {
       fill: none;
+      stroke-width:1px;
       stroke: red;
       shape-rendering: crispEdges;
+  }
+  .axis path{
+    stroke-width:1px;
   }
 }
 
