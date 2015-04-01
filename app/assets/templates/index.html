@@ -41,8 +41,9 @@
           <a href ng-click="Tab.setTab(4)">Property Prices</a>
         </li>
       </ul>
+      <results-header></results-header>
       <!-- Loading div -->
-      <loading></loading>
+      <loading></loading> <!-- //which isnt working -->
       <!-- CONTENT PER TAB -->
       <competitors ng-show="Tab.isSet(1)"></competitors>
       <crimes ng-show="Tab.isSet(2)"></crimes>

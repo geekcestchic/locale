@@ -164,6 +164,12 @@ app.factory('PropertyService',['$http', function($http){
          .attr("y",function(d){
           return yScale(d.average_sold_price_1year)-5;
          })
+         // .attr("fill","red")
+         .style("fill",function(d){
+          var increase = d.average_sold_price_1year-d.average_sold_price_7year;
+          if (increase >0){return 'mediumaquamarine'}
+          else {return 'red'}
+         })
 
       svg.append("g")
         .attr("class","axis")
