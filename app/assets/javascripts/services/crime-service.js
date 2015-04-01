@@ -18,7 +18,21 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
       crimesArray = _.reject(crimesArray, function(i){return i.distance>200})
       //calling the next functions
       CrimeService.drawCrimeHistogram(crimesArray)
+      CrimeService.insertYears()
       CrimeService.drawCrimePie(crimesArray)
+    },
+
+    insertYears:function(){
+      //clearing out the form
+      // if ($('crimes').has('.years')?) { $('crimes').removeChild('.years') };
+      
+      var divElement = '<div class="years">'
+      for (var i = 0; i <=5; i++) {
+        divElement +='<button id="201'+i+'">201'+i+'</button>'
+      }
+      divElement += '</div>'
+      $(divElement).insertAfter($('crimes').find('.top'))
+
     },
 
     drawCrimePie:function(values){
@@ -84,11 +98,17 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
                   var percentage = Math.round(countCrimes[i].value/values.length * 100);
                   return countCrimes[i].label + ' - '+ percentage + '%'; 
                 });        //get the label from our original data array
-
+        console.log(countCrimes.length)
         vis.append("text")
-           .attr("y", 0)
-           .attr("x", (w / 2))
-           .text("Types of crime")
+           .attr("y", (h/2))
+           .attr("x", -35)
+           .text("Types of crime / %")
+           // .style("")
+        vis.append("text")
+           .attr("y", (-h/2)+30)
+           .attr("x", -45)
+           .text(countCrimes.length + ' different types')
+           .style("font-size",20)
 
     },
 

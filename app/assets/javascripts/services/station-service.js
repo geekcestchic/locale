@@ -118,8 +118,6 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
         })
         .attr('font-size',20)
 
-     
-
       //Create X axis
       svg.append("g")
        .attr("class", "axis")
@@ -127,6 +125,7 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
        .call(xAxis)
        .attr("font-size", "15px")
        .style('stroke-width',1)
+
       //Your location
       svg.append('circle')
          .attr('r',10)
