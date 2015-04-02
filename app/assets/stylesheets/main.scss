@@ -16,8 +16,10 @@
 }
 .welcome{
   background-image:url('https://s3-eu-west-1.amazonaws.com/locale-app/grand-central.jpg');
+  // background-image:url('https://s3-eu-west-1.amazonaws.com/locale-app/st-pauls.jpg');
   background-size:cover;
   background-attachment:fixed;
+  // filter: blur(20px) grayscale(20%);//look into this later
   h1{
     color:mediumaquamarine;
     text-shadow: 2px 2px 0px white;
@@ -112,6 +114,7 @@
     margin-top:15%;
   }
   background-image:url('https://s3-eu-west-1.amazonaws.com/locale-app/london.jpg');
+  // background-image:url('https://s3-eu-west-1.amazonaws.com/locale-app/st-pauls.jpg');
   background-size:cover;
   background-attachment:fixed;
 }

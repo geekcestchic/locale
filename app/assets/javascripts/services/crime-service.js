@@ -100,7 +100,7 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
                 });        //get the label from our original data array
         console.log(countCrimes.length)
         vis.append("text")
-           .attr("y", (h/2))
+           .attr("y", (h/2-10))
            .attr("x", -35)
            .text("Types of crime / %")
            // .style("")
@@ -192,7 +192,7 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
           .style("font-size",20)
 
       svg.append("text")
-         .attr("y", height+margin.bottom)
+         .attr("y", height+margin.bottom-10)
          .attr("x", width / 2 - margin.right)
          .text("Distance from location / m")
 

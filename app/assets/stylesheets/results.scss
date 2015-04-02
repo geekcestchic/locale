@@ -64,12 +64,14 @@
   property-prices{
     .positive{
       background:mediumaquamarine;
-      padding:20px;
+      padding:10px;
+      color:white;
     }
     .negative{
       background:red;
-      padding:20px;
+      padding:10px;
       color:black;
+      color:white;
     }
   }
   stations{
