@@ -27,10 +27,6 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
               longitude: stationObject.geometry.location.D  
             };
             closestStations[i].distance = getDistance(formattedCurrentLocation, closestStations[i]);
-            if (i > 0 && closestStations[i].distance - closestStations[i-1].distance < 20){
-              console.log('stations too close!')
-              // closestStations.splice(i,1)
-            }
           };
         };
         StationService.showClosestStations(closestStations);

@@ -1,9 +1,9 @@
-app.controller('TabController', [function(){
-  this.tab = 1;
+app.controller('TabController', ['$scope', function($scope){
+  $scope.tab = 1;
   this.isSet = function(checkTab){
-    return this.tab === checkTab;
+    return $scope.tab === checkTab;
   };
   this.setTab = function(setTab){
-    this.tab = setTab;
+    $scope.tab = setTab;
   };
 }]);

@@ -98,7 +98,6 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
                   var percentage = Math.round(countCrimes[i].value/values.length * 100);
                   return countCrimes[i].label + ' - '+ percentage + '%'; 
                 });        //get the label from our original data array
-        console.log(countCrimes.length)
         vis.append("text")
            .attr("y", (h/2-10))
            .attr("x", -35)
