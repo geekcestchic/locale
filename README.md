@@ -7,7 +7,7 @@ Analysing a location by pulling down API data and displaying it with cool infogr
 
 ###Versions & Setup
 
-This web app uses Rails 4.2.0, psql 9.4.0 and Angular 1.3.15. To get started, clone the project using the URL git@github.com:howarda9/locater.git, run a rake db:create db:migrate db:seed
+This web app uses Rails 4.2.0, psql 9.4.0 and Angular 1.3.15. To get started, clone the project using the URL git@github.com:howarda9/locale.git, run a rake db:create
 
 ###System Dependencies
 
