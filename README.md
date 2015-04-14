@@ -1,4 +1,4 @@
-### Locale
+# Locale
 
 [live demo here](http://locale-app.herokuapp.com/#/)
 
