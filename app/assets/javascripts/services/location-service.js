@@ -1,5 +1,8 @@
 app.factory('LocationService',['$http','$q', function($http, $q){
-  
+  //In this service we:
+  //geocode
+  //reverse-geocode the address
+  //Get competitors
   var LocationService = {
     
     codeAddress: function(address){
