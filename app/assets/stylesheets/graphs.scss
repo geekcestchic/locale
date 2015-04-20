@@ -1,5 +1,6 @@
 svg{
   background-color: rgba(233,229,220,1);
+  margin: 20px 0 0 0;
 }
 
 property-prices{
@@ -69,7 +70,9 @@ crimes{
   }
   .bar rect:hover{
     // stroke-dasharray:none;
-    fill:rgb(226,187,60);
+    // fill:none;
+    stroke-dasharray: 10,10;
+    stroke:black;
   }
 
   .bar text {
