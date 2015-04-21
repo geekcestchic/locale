@@ -1,5 +1,15 @@
 <div ng-controller="LocationController as location"> 
-  <div class="bigdiv welcome" ng-click="scrollTop(1)"><h1>Welcome to <i><u>Locale</u></i>, your location analysis tool</h1></div>
+  <div class="bigdiv welcome" ng-click="scrollTop(1)">
+    <h1>Welcome to <i><u>Locale</u></i>, your location analysis tool</h1>
+    <div class="circle one"><div id="one"></div></div>
+      <div class="circle two"><div id="two"></div></div>
+      <div class="circle three"><div id="three"></div></div>
+      <div class="circle four"><div id="four"></div></div>
+      <div class="circle five"><div id="five"></div></div>
+      <div class="circle six"><div id="six"></div></div>
+      <div class="circle seven"><div id="seven"></div>
+    </div>
+  </div>
   <div class="bigdiv intro" ng-click="scrollTop(2)">
     <h2>It's all pretty simple.<br>Input an address and we return some stats. You can also compare two addresses.<br><i>GET STARTED?</i></h2>
   </div>
@@ -7,20 +17,11 @@
     
     <!-- WELCOME DIV -->
     <div class="bigdiv search">    
-      <!-- INPUT FORM -->
-      
-      <div class="circle-three circle">
-          <div class="circle-two circle">
-            <div class="circle-one circle">
-              <div class="line"></div>
-              <form name="locationForm" ng-submit="returnStats(newLocation)">
-                <label><h3>Enter a valid London address<br><i>(e.g. 413 Oxford Street, W1C 2PF)</i></h3></label>
-                <input type="text" ng-model="newLocation">
-                <button ng-click="scrollTop(4)">lookup</button>
-              </form>
-            </div>
-          </div>
-      </div>
+      <form name="locationForm" ng-submit="returnStats(newLocation)" class="form">
+        <label><h3>Enter a valid London address below<br><i>(e.g. 413 Oxford Street, W1C 2PF)</i></h3></label>
+        <input type="text" ng-model="newLocation" placeholder="Press enter to submit">
+      </form>
+      <div class="pulse"></div>
     </div>
 
     <!-- RESULTS -->

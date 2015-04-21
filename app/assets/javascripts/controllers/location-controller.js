@@ -2,7 +2,8 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   
   //The function that is called upon form submission
   $scope.returnStats =  function(address){
-    
+    //first bring the window down to the bottom
+    $scope.scrollTop(4);
     // CRIMES//
     //geocoding the address to use the crimes api
     LocationService.codeAddress(address)  // Geocoding the address, see Location Service
