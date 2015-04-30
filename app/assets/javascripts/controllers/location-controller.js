@@ -2,13 +2,17 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   
   //The function that is called upon form submission
   $scope.returnStats =  function(address){
+    
+    console.log(address)
     //first bring the window down to the bottom
     $scope.scrollTop(4);
+
     // CRIMES//
-    //geocoding the address to use the crimes api
-    LocationService.codeAddress(address)  // Geocoding the address, see Location Service
+    //geocoding the address to use the crimes API
+    LocationService.codeAddress(address)
     .then(function(data) {
       $scope.coordinates = data;
+      console.log($scope.coordinates) //buggy
       LocationService.reverseGeocode(data)
       .then(function(data){
         $scope.location=data; //we assign this variable that we will use in our html
@@ -17,7 +21,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
     })
     .then(function(crimesObject) {
       $scope.crimes = crimesObject.data;
-      CrimeService.countCrimes($scope.coordinates, $scope.crimes);
+      CrimeService.countCrimes($scope.coordinates, $scope.crimes); //count the crimes to then graph them
     });
 
     //PROPERTY PRICES// 
@@ -42,6 +46,8 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
         })
       });    
     })
+
+    //reinitialize the form
     $scope.newLocation = '';
     $scope.locationForm.$setPristine();
   };
@@ -53,8 +59,11 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   $scope.scrollTop = function(n){
     var windowHeight = $(window).height()
     $("html, body").animate({ scrollTop: n * windowHeight });
-  }
+  };
+  
+  $scope.clearResults = function(){
 
+  };
 }]);
 
 mapStyle = [{

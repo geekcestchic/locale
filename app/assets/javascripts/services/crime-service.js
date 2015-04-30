@@ -38,11 +38,17 @@ app.factory('CrimeService',['$http','LocationService', function($http, LocationS
     drawCrimePie:function(values){
       //formatting data
       var dataset = values;
+      //sort crimes by type of crime
       var sortedCrimes = _.groupBy(dataset,function(crime){return crime.category})
       var countCrimes = []
+      // count crimes by type, we insert a hash at every index of the array
       _.each(sortedCrimes,function(crime){
         countCrimes.push({label:crime[0].category,value:crime.length})
       });
+      //limit to the 5 top types of crimes, otherwise gets messy
+      if (countCrimes.length >= 5) {
+          countCrimes.length = 5; 
+      }
       
       var w = $(window).width()/2,                        //width
           h = $(window).height()/2,  
