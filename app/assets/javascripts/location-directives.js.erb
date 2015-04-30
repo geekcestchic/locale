@@ -30,15 +30,17 @@ app.directive('resultsHeader',function(){
   
   return{
     restrict:'E',
-    templateUrl: "<%= asset_path('results-header.html') %>",
-    controller: function($scope){
-      $scope.description = function(){ //not working
-        if (Tab.isSet(1)) return "closest competitors in the area";
-        else if (Tab.isSet(2)) return "within a 200m radius of your location";
-        else if (Tab.isSet(3)) return "tube and rail stations ranked by distance";
-        else if (Tab.isSet(4)) return "average prices in streets in the area now compared to 7 years ago";
-      }
-    }
+    templateUrl: "<%= asset_path('results-header.html') %>"//,
+    // controller: function($scope){
+    //   $scope.description = function(){ //not working
+    //     var description
+    //     if (Tab.isSet(1)) {description = "closest competitors in the area"; console.log('tab 1');}
+    //     else if (Tab.isSet(2)) description = "within a 200m radius of your location";
+    //     else if (Tab.isSet(3)) description = "tube and rail stations ranked by distance";
+    //     else if (Tab.isSet(4)) description = "average prices in streets in the area now compared to 7 years ago";
+    //     return description
+    //   }
+    // }
   }
 })
 

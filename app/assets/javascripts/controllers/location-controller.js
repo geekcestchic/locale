@@ -61,12 +61,14 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
     $("html, body").animate({ scrollTop: n * windowHeight });
   };
   
+  //function that will clear the results to reinitialize
   $scope.clearResults = function(){
-    //function that will clear the results to reinitialize
     $scope.coordinates = false;
   };
+
 }]);
 
+//snazzy maps styling
 mapStyle = [{
   "featureType":"landscape.natural",
   "elementType":"geometry.fill",
