@@ -62,7 +62,8 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   };
   
   $scope.clearResults = function(){
-
+    //function that will clear the results to reinitialize
+    $scope.coordinates = false;
   };
 }]);
 
