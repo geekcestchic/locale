@@ -12,13 +12,13 @@ app.factory('PropertyService', ['$http','$q', function($http,$q){
 
     appendPropertyData: function(dataset){
       //calculate the average increase in property value average over 7 years
-      console.log(dataset);
       var sum = _.reduce(dataset, function(memo, property){ 
         var increase = (property.average_sold_price_1year-property.average_sold_price_7year)/property.average_sold_price_7year
         return memo + increase; 
       }, 0);
       var averageIncreasePrice = Math.round(sum/dataset.length * 100)
       //formatting the value and displaying it right
+      console.log(averageIncreasePrice)
       if (averageIncreasePrice >0){
         $('property-prices').append('<div class="positive"><p>Average Property Price increase over 7 years: +'+ averageIncreasePrice +'%</p></div>')
       }

@@ -13,7 +13,7 @@ app.controller('TabController', ['$scope', function($scope){
   //function that sets the current tab
   $scope.setTab = function(setTab){
     $scope.tab = setTab;
-    $scope.setDescription($scope.tab);
+    $scope.setDescription(setTab);
   }; 
   
   //sets the description in the header

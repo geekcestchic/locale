@@ -37,7 +37,6 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
       dataset = dataset.filter(function(area){
         return area.average_sold_price_1year !== "0"
       });
-      console.log(dataset);
       //draw the graphs in the service
       PropertyService.appendPropertyData(dataset);
       PropertyService.graphPropertyPrices(dataset); 
