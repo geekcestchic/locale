@@ -5,7 +5,9 @@ svg{
 
 property-prices{
   .property{
+    margin:0;
   }
+
   .bar rect {
     fill: white;
     shape-rendering: crispEdges;
@@ -28,8 +30,8 @@ property-prices{
   }
   .negative{
     stroke: red;
-    fill:red;
-    color:red;
+    fill: red;
+    color: red;
   }
 }
 

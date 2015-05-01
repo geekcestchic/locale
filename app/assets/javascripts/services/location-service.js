@@ -1,8 +1,8 @@
 app.factory('LocationService',['$http','$q', function($http, $q){
   //In this service we:
-  //geocode
-  //reverse-geocode the address
-  //Get competitors
+  //-geocode
+  //-reverse-geocode the address
+  //-Get competitors
   var LocationService = {
     
     codeAddress: function(address){
@@ -11,8 +11,8 @@ app.factory('LocationService',['$http','$q', function($http, $q){
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           var coordinates = {
-            longitude: results[0].geometry.location.D,
-            latitude: results[0].geometry.location.k
+            longitude: results[0].geometry.location.F,
+            latitude: results[0].geometry.location.A
           };
           deferred.resolve(coordinates);
         } else {
@@ -80,8 +80,8 @@ app.factory('LocationService',['$http','$q', function($http, $q){
             };
             competitors[i] = { //formatting our own object, so we can then pass it to calculate the distance
               name: stationObject.name,
-              latitude: stationObject.geometry.location.k,
-              longitude: stationObject.geometry.location.D  
+              latitude: stationObject.geometry.location.A,
+              longitude: stationObject.geometry.location.F  
             };
             competitors[i].distance = getDistance(formattedCurrentLocation, competitors[i]);
           } else {

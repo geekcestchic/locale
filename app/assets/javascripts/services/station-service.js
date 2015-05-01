@@ -23,8 +23,8 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
             };
             closestStations[i] = { //formatting our own object, so we can then pass it to calculate the distance
               name: stationObject.name,
-              latitude: stationObject.geometry.location.k,
-              longitude: stationObject.geometry.location.D  
+              latitude: stationObject.geometry.location.A,
+              longitude: stationObject.geometry.location.F  
             };
             closestStations[i].distance = getDistance(formattedCurrentLocation, closestStations[i]);
           };

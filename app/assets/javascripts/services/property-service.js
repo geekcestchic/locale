@@ -1,22 +1,13 @@
-app.factory('PropertyService',['$http', function($http){
+app.factory('PropertyService', ['$http','$q', function($http,$q){
   
   var PropertyService = {
 
     getPropertyPrices: function(address){
+      var deferred = $q.defer();
       var formattedAddress = address.replace(',','').split(' ').join('+');
-      $http.post('static/get_property_prices', {data:{area:formattedAddress}})
-      .success(function(data, status) {
-        //let us format the data first
-        var dataset = data.areas
-        dataset = dataset.filter(function(area){
-          return area.average_sold_price_1year !== "0"
-        })
-        PropertyService.appendPropertyData(dataset)
-        PropertyService.graphPropertyPrices(dataset) 
-      })
-      .error(function(data, status) {
-        console.log(data) || "Request failed";
-      });
+      var request = $http.post('static/get_property_prices', {data:{area:formattedAddress}})
+      deferred.resolve(request);
+      return deferred.promise; 
     },
 
     appendPropertyData: function(dataset){

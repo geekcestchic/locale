@@ -3,7 +3,11 @@
   z-index:-1;
   text-align:left;
   z-index: 0;
-  
+  .error-div{
+    padding:30px;
+    text-align: center;
+    color:#5C1F22;
+  }
   loading{
     width:100%;
     height:500px;

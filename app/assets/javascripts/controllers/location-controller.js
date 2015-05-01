@@ -8,6 +8,18 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
     $scope.getCrimes(address);
     //GET PROPERTY PRICES// 
     PropertyService.getPropertyPrices(address) 
+    .fulfilled(function(data, status) {
+      //let us format the data first
+      var dataset = data.areas
+      dataset = dataset.filter(function(area){
+        return area.average_sold_price_1year !== "0"
+      })
+      PropertyService.appendPropertyData(dataset)
+      PropertyService.graphPropertyPrices(dataset) 
+    })
+    .rejected(function(data, status) {
+      console.log(data) || "Request failed";
+    });
     //GET GOOGLE PLACES//
     $scope.googlePlaces(address)
     //finally reinitialize the form
@@ -33,11 +45,8 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   $scope.googlePlaces = function(address){
     LocationService.codeAddress(address)
     .then(function(data){
-      $scope.coordinatesForStation = data;
       $scope.$on('mapInitialized', function(event, map){
         $scope.map = map
-
-        //CLOSEST STATION
         //getting the closest station from Google places
         StationService.getClosestStation($scope.map, data.latitude, data.longitude)
         // getting the closest competitors

@@ -1,4 +1,7 @@
 <div class="left">
+  <div ng-hide="competitors" class="error-div">
+    <h1>...loading. If nothing shows after 3 seconds, please try again.</h1>
+  </div>
   <ul>
     <li ng-repeat="competitor in competitors">{{competitor.name}} | {{competitor.distance}}m</li>
   </ul>
