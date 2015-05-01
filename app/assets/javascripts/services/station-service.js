@@ -3,7 +3,6 @@ app.factory('StationService',['$http','$resource', function($http,$resource){
   var StationService = {
 
     getClosestStation: function(map,latitude,longitude){
-      
       var currentLocation = new google.maps.LatLng(latitude,longitude);
       var closestStations = [];
       var request = {

@@ -58,7 +58,6 @@ app.factory('LocationService',['$http','$q', function($http, $q){
 
     getCompetitors: function(type,map,latitude,longitude){
       var deferred = $q.defer();
-
       var currentLocation = new google.maps.LatLng(latitude,longitude);
       var competitors = [];
       var request = {

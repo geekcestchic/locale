@@ -1,5 +1,4 @@
 app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','$q','LocationService','CrimeService','PropertyService','StationService' ,function($scope, $rootScope, $timeout, $http, $q, LocationService, CrimeService, PropertyService,StationService){
-  
   //The function that is called upon form submission
   $scope.returnStats =  function(address){
     //first bring the window down to the bottom
@@ -7,26 +6,14 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
     //GET CRIMES//
     $scope.getCrimes(address);
     //GET PROPERTY PRICES// 
-    PropertyService.getPropertyPrices(address) 
-    .fulfilled(function(data, status) {
-      //let us format the data first
-      var dataset = data.areas
-      dataset = dataset.filter(function(area){
-        return area.average_sold_price_1year !== "0"
-      })
-      PropertyService.appendPropertyData(dataset)
-      PropertyService.graphPropertyPrices(dataset) 
-    })
-    .rejected(function(data, status) {
-      console.log(data) || "Request failed";
-    });
+    $scope.getPropertyPrices(address);
     //GET GOOGLE PLACES//
     $scope.googlePlaces(address)
     //finally reinitialize the form
     $scope.newLocation = '';
     $scope.locationForm.$setPristine();
   };
-
+  
   //Crimes function, will refer to crimes service
   $scope.getCrimes = function(address){
     LocationService.codeAddress(address)
@@ -40,22 +27,45 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
       CrimeService.countCrimes($scope.coordinates, $scope.crimes); //count the crimes to then graph them
     });
   }
+  //Get property prices
+  $scope.getPropertyPrices = function(address){
+    PropertyService.getPropertyPrices(address) 
+    .then(function(response) {
+      // fulfillment/success of promise
+      var dataset = response.data.areas;
+      //reject streets with no sales in the last year
+      dataset = dataset.filter(function(area){
+        return area.average_sold_price_1year !== "0"
+      });
+      console.log(dataset);
+      //draw the graphs in the service
+      PropertyService.appendPropertyData(dataset);
+      PropertyService.graphPropertyPrices(dataset); 
+      $scope.property = true;
+    }, function(reason) {
+      // rejection of promise
+      alert('failed because: '+reason)
+      $scope.property = false;
+    });
+  };
   
   //Get closest station and competitors
   $scope.googlePlaces = function(address){
     LocationService.codeAddress(address)
     .then(function(data){
+      var myMap;
+      //once the map object is initialized, pass it in the Google Places API
       $scope.$on('mapInitialized', function(event, map){
-        $scope.map = map
+        myMap = map;
         //getting the closest station from Google places
-        StationService.getClosestStation($scope.map, data.latitude, data.longitude)
+        StationService.getClosestStation(myMap, data.latitude, data.longitude);
         // getting the closest competitors
-        LocationService.getCompetitors('cafe',$scope.map, data.latitude, data.longitude)
+        LocationService.getCompetitors('cafe',myMap, data.latitude, data.longitude)
         .then(function(data){
           $scope.competitors = data;
-        })
-      });    
-    })
+        });  
+      }); 
+    });
   };
 
   //reverse geocoding to obtain formatted address
@@ -81,7 +91,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   $scope.mapStyle = mapStyle;
 
 }]);
-//end of controller
+//end of controller//
 
 
 //snazzy maps styling variable
