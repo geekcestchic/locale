@@ -2,34 +2,35 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
   
   //The function that is called upon form submission
   $scope.returnStats =  function(address){
-    
-    console.log(address)
     //first bring the window down to the bottom
     $scope.scrollTop(4);
+    //GET CRIMES//
+    $scope.getCrimes(address);
+    //GET PROPERTY PRICES// 
+    PropertyService.getPropertyPrices(address) 
+    //GET GOOGLE PLACES//
+    $scope.googlePlaces(address)
+    //finally reinitialize the form
+    $scope.newLocation = '';
+    $scope.locationForm.$setPristine();
+  };
 
-    // CRIMES//
-    //geocoding the address to use the crimes API
+  //Crimes function, will refer to crimes service
+  $scope.getCrimes = function(address){
     LocationService.codeAddress(address)
     .then(function(data) {
       $scope.coordinates = data;
-      console.log($scope.coordinates) //buggy
-      LocationService.reverseGeocode(data)
-      .then(function(data){
-        $scope.location=data; //we assign this variable that we will use in our html
-      });
+      $scope.reverseGeocode(data);
       return CrimeService.getCrimes(data.latitude, data.longitude)  // Getting Data from Crimes API
     })
     .then(function(crimesObject) {
       $scope.crimes = crimesObject.data;
       CrimeService.countCrimes($scope.coordinates, $scope.crimes); //count the crimes to then graph them
     });
-
-    //PROPERTY PRICES// 
-    //Calling the Zoopla API
-    PropertyService.getPropertyPrices(address)
-    
-    //MAPS & PLACES//
-    //geocoding the address to use the google places API to find the closest station
+  }
+  
+  //Get closest station and competitors
+  $scope.googlePlaces = function(address){
     LocationService.codeAddress(address)
     .then(function(data){
       $scope.coordinatesForStation = data;
@@ -46,15 +47,16 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
         })
       });    
     })
-
-    //reinitialize the form
-    $scope.newLocation = '';
-    $scope.locationForm.$setPristine();
   };
 
-  //snazzy maps
-  $scope.mapStyle = mapStyle;
-  
+  //reverse geocoding to obtain formatted address
+  $scope.reverseGeocode = function(coordinates){
+    LocationService.reverseGeocode(coordinates)
+    .then(function(data){
+      $scope.location=data; //we assign this variable that we will use in our html
+    });
+  };
+
   //Scrolling to n times the height below the top of the page!
   $scope.scrollTop = function(n){
     var windowHeight = $(window).height()
@@ -66,9 +68,14 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
     $scope.coordinates = false;
   };
 
-}]);
+  //snazzy maps
+  $scope.mapStyle = mapStyle;
 
-//snazzy maps styling
+}]);
+//end of controller
+
+
+//snazzy maps styling variable
 mapStyle = [{
   "featureType":"landscape.natural",
   "elementType":"geometry.fill",
