@@ -1,4 +1,5 @@
 app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','$q','LocationService','CrimeService','PropertyService','StationService' ,function($scope, $rootScope, $timeout, $http, $q, LocationService, CrimeService, PropertyService,StationService){
+  
   //The function that is called upon form submission
   $scope.returnStats =  function(address){
     //first bring the window down to the bottom
@@ -27,6 +28,7 @@ app.controller('LocationController', ['$scope','$rootScope','$timeout','$http','
       CrimeService.countCrimes($scope.coordinates, $scope.crimes); //count the crimes to then graph them
     });
   }
+  
   //Get property prices
   $scope.getPropertyPrices = function(address){
     PropertyService.getPropertyPrices(address) 
