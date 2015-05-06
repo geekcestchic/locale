@@ -11,8 +11,8 @@ app.factory('LocationService',['$http','$q', function($http, $q){
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           var coordinates = {
-            longitude: results[0].geometry.location.F,
-            latitude: results[0].geometry.location.A
+            longitude: results[0].geometry.location.C,
+            latitude: results[0].geometry.location.j
           };
           deferred.resolve(coordinates);
         } else {
@@ -79,8 +79,8 @@ app.factory('LocationService',['$http','$q', function($http, $q){
             };
             competitors[i] = { //formatting our own object, so we can then pass it to calculate the distance
               name: stationObject.name,
-              latitude: stationObject.geometry.location.A,
-              longitude: stationObject.geometry.location.F  
+              latitude: stationObject.geometry.location.j,
+              longitude: stationObject.geometry.location.C  
             };
             competitors[i].distance = getDistance(formattedCurrentLocation, competitors[i]);
           } else {
