@@ -9,15 +9,16 @@ app.factory('LocationService',['$http','$q', function($http, $q){
       var deferred = $q.defer();
       var geocoder = new google.maps.Geocoder();
       geocoder.geocode( { 'address': address}, function(results, status) {
+        console.log(results);
         if (status == google.maps.GeocoderStatus.OK) {
           var coordinates = {
-            longitude: results[0].geometry.location.C,
-            latitude: results[0].geometry.location.j
+            longitude: results[0].geometry.location.lng(),
+            latitude: results[0].geometry.location.lat()
           };
           deferred.resolve(coordinates);
         } else {
           deferred.reject();
-          alert("Geocode was not successful for the following reason: " + status);
+          // alert("Geocode was not successful for the following reason: " + status);
         }
       });
       return deferred.promise; 
@@ -33,11 +34,11 @@ app.factory('LocationService',['$http','$q', function($http, $q){
             var location = results[1].formatted_address;
             deferred.resolve(location)
           } else {
-            alert('No location found');
+            // alert('No location found');
           }
         } else {
           deferred.reject();
-          alert('Geocoder failed due to: ' + status);
+          // alert('Geocoder failed due to: ' + status);
         }   
       });
       return deferred.promise;
@@ -79,13 +80,13 @@ app.factory('LocationService',['$http','$q', function($http, $q){
             };
             competitors[i] = { //formatting our own object, so we can then pass it to calculate the distance
               name: stationObject.name,
-              latitude: stationObject.geometry.location.j,
-              longitude: stationObject.geometry.location.C  
+              latitude: stationObject.geometry.location.lat(),
+              longitude: stationObject.geometry.location.lng()  
             };
             competitors[i].distance = getDistance(formattedCurrentLocation, competitors[i]);
           } else {
             deferred.reject(status);
-            alert("Could not retrieve competitors for the following reason: " + status);
+            // alert("Could not retrieve competitors for the following reason: " + status);
           }
         } // end for loop
         deferred.resolve(competitors);
